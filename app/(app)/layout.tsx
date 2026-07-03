@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { Wallet } from "lucide-react";
 import { getCurrentUser } from "@/lib/auth";
 import { signOut } from "@/app/actions/auth";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { AppNav } from "@/components/app/app-nav";
+import { LogoMark } from "@/components/brand/logo-mark";
 
 export default async function AppLayout({
   children,
@@ -25,9 +25,7 @@ export default async function AppLayout({
             href="/dashboard"
             className="flex items-center gap-2 font-display font-bold"
           >
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-brand text-white">
-              <Wallet className="h-4 w-4" />
-            </span>
+            <LogoMark size={32} priority />
             Money Pilot
           </Link>
           <div className="flex items-center gap-3">

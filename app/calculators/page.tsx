@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Wallet } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { LogoMark } from "@/components/brand/logo-mark";
 import { CalculatorHub } from "@/components/calculators/calculator-hub";
 
 export const metadata: Metadata = {
@@ -19,9 +19,7 @@ export default function CalculatorsPage() {
             href="/"
             className="flex items-center gap-2 font-display font-bold"
           >
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-brand text-white">
-              <Wallet className="h-4 w-4" />
-            </span>
+            <LogoMark size={32} priority />
             Money Pilot
           </Link>
           <div className="flex items-center gap-2">

@@ -4,7 +4,6 @@ import * as React from "react";
 import { useFormState, useFormStatus } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Wallet,
   ArrowRight,
   ArrowLeft,
   ShieldCheck,
@@ -17,6 +16,7 @@ import {
   AlertCircle,
 } from "lucide-react";
 import { GlassCard } from "@/components/ui/card";
+import { LogoMark } from "@/components/brand/logo-mark";
 import { cn } from "@/lib/utils";
 import {
   completeOnboarding,
@@ -81,9 +81,7 @@ export function OnboardingWizard({ defaultName }: { defaultName: string }) {
 
       <GlassCard className="w-full max-w-lg p-8 shadow-glass-lg">
         <div className="mb-6 flex items-center gap-2 font-display text-lg font-bold">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-brand text-white">
-            <Wallet className="h-5 w-5" />
-          </span>
+          <LogoMark size={36} />
           Money Pilot
         </div>
 

@@ -2,9 +2,10 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Menu, X, Wallet } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { LogoMark } from "@/components/brand/logo-mark";
 import { cn } from "@/lib/utils";
 
 const links = [
@@ -44,9 +45,7 @@ export function Navbar() {
             href="/"
             className="flex shrink-0 items-center gap-2 font-display text-lg font-bold"
           >
-            <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-brand text-white shadow-lg">
-              <Wallet className="h-5 w-5" />
-            </span>
+            <LogoMark size={36} priority />
             Money Pilot
           </Link>
 

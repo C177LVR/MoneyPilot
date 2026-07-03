@@ -105,6 +105,12 @@ prisma/
   SVG health-score ring.
 - **Accessibility:** semantic HTML, focus-visible rings, `prefers-reduced-motion`
   support, labelled controls.
+- **Logo:** the compass mark (`components/brand/logo-mark.tsx` → `public/logo-icon.png`)
+  is used everywhere alongside a live "Money Pilot" text label (not baked into the
+  image) so it stays theme-aware in dark mode. `public/logo-full.png` (full
+  lockup with wordmark + tagline) and the source `public/logo.jpg` are also
+  available for larger placements. `app/icon.png` / `app/apple-icon.png` are
+  generated from the mark for the browser favicon and iOS home-screen icon.
 
 ## Homepage sections
 

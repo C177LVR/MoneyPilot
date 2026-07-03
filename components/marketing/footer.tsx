@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Wallet, Twitter, Instagram, Youtube, Linkedin } from "lucide-react";
+import { Twitter, Instagram, Youtube, Linkedin } from "lucide-react";
+import { LogoMark } from "@/components/brand/logo-mark";
 
 const columns = [
   {
@@ -44,9 +45,7 @@ export function Footer() {
               href="/"
               className="flex items-center gap-2 font-display text-lg font-bold"
             >
-              <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-brand text-white">
-                <Wallet className="h-5 w-5" />
-              </span>
+              <LogoMark size={36} />
               Money Pilot
             </Link>
             <p className="mt-4 max-w-xs text-sm text-muted-foreground">

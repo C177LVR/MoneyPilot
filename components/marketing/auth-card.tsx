@@ -4,8 +4,9 @@ import * as React from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useFormState, useFormStatus } from "react-dom";
-import { Wallet, AlertCircle, MailCheck, Loader2 } from "lucide-react";
+import { AlertCircle, MailCheck, Loader2 } from "lucide-react";
 import { GlassCard } from "@/components/ui/card";
+import { LogoMark } from "@/components/brand/logo-mark";
 import { signIn, signUp, type AuthState } from "@/app/actions/auth";
 
 const initialState: AuthState = {};
@@ -45,9 +46,7 @@ export function AuthCard({ mode }: AuthCardProps) {
           href="/"
           className="mb-8 flex items-center justify-center gap-2 font-display text-lg font-bold"
         >
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-brand text-white">
-            <Wallet className="h-5 w-5" />
-          </span>
+          <LogoMark size={36} priority />
           Money Pilot
         </Link>
 
