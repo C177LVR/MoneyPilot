@@ -5,6 +5,8 @@ import { prisma } from "@/lib/prisma";
 import { requireUserId } from "@/lib/action-helpers";
 import { getLesson, lessonKey } from "@/lib/learning-content";
 import { levelForXp, nextStreak } from "@/lib/learning";
+import { evaluateAndAwardAchievements } from "@/lib/gamification";
+import type { AchievementDef } from "@/lib/achievements";
 
 export interface SubmitLessonResult {
   score: number; // percent 0-100
@@ -15,6 +17,7 @@ export interface SubmitLessonResult {
   xp: number;
   level: number;
   streak: number;
+  newAchievements: AchievementDef[];
 }
 
 const BASE_XP = 50;
@@ -78,9 +81,25 @@ export async function submitLesson(
     ]);
   }
 
+  const newAchievements = await evaluateAndAwardAchievements(userId).catch((e) => {
+    console.error("achievement evaluation failed:", e);
+    return [];
+  });
+
+  // Achievement XP is applied inside evaluateAndAwardAchievements — re-read
+  // the profile so the returned totals reflect any bonus just awarded.
+  if (newAchievements.length > 0) {
+    const finalProfile = await prisma.profile.findUnique({ where: { userId } });
+    if (finalProfile) {
+      xp = finalProfile.xp;
+      level = finalProfile.level;
+    }
+  }
+
   revalidatePath("/learn");
   revalidatePath(`/learn/${courseSlug}`);
   revalidatePath(`/learn/${courseSlug}/${lessonSlug}`);
+  revalidatePath("/achievements");
 
   return {
     score,
@@ -91,5 +110,6 @@ export async function submitLesson(
     xp,
     level,
     streak,
+    newAchievements,
   };
 }

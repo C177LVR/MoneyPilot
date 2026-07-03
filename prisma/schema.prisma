@@ -34,6 +34,7 @@ model User {
   lessonProgress LessonProgress[]
   lessonCompletions LessonCompletion[]
   achievements  UserAchievement[]
+  unlockedAchievements UnlockedAchievement[]
 }
 
 enum Role {
@@ -220,6 +221,21 @@ model LessonProgress {
   quizScore   Int?
 
   @@unique([userId, lessonId])
+}
+
+// UnlockedAchievement mirrors the LessonCompletion pattern: achievement
+// definitions (title, description, unlock condition) live as static code in
+// lib/achievements.ts rather than DB rows, since unlock logic inherently
+// belongs in code and this avoids needing to seed the Achievement table.
+// Achievement/UserAchievement below stay reserved for a future admin CMS.
+model UnlockedAchievement {
+  id             String   @id @default(cuid())
+  userId         String
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  achievementKey String
+  unlockedAt     DateTime @default(now())
+
+  @@unique([userId, achievementKey])
 }
 
 model Achievement {

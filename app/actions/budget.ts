@@ -5,6 +5,7 @@ import { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
 import { requireUserId, type ActionState } from "@/lib/action-helpers";
 import { DEFAULT_CATEGORIES } from "@/lib/budget";
+import { evaluateAndAwardAchievements } from "@/lib/gamification";
 
 const PATH = "/budget";
 
@@ -39,6 +40,9 @@ export async function saveBudgetCategory(
     console.error("saveBudgetCategory failed:", err);
     return { error: "Couldn't save the category. Check the database connection." };
   }
+  await evaluateAndAwardAchievements(userId).catch((e) =>
+    console.error("achievement evaluation failed:", e)
+  );
   revalidatePath(PATH);
   return { ok: true };
 }
@@ -96,5 +100,8 @@ export async function seedDefaultCategories(): Promise<void> {
   } catch (err) {
     console.error("seedDefaultCategories failed:", err);
   }
+  await evaluateAndAwardAchievements(userId).catch((e) =>
+    console.error("achievement evaluation failed:", e)
+  );
   revalidatePath(PATH);
 }

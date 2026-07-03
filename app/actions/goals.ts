@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
 import { requireUserId, type ActionState } from "@/lib/action-helpers";
+import { evaluateAndAwardAchievements } from "@/lib/gamification";
 
 const PATHS = ["/goals", "/dashboard"];
 const revalidate = () => PATHS.forEach((p) => revalidatePath(p));
@@ -42,6 +43,9 @@ export async function saveGoal(
     console.error("saveGoal failed:", err);
     return { error: "Couldn't save the goal. Check the database connection." };
   }
+  await evaluateAndAwardAchievements(userId).catch((e) =>
+    console.error("achievement evaluation failed:", e)
+  );
   revalidate();
   return { ok: true };
 }

@@ -14,6 +14,8 @@ import {
   PieChart,
   Bot,
   GraduationCap,
+  Trophy,
+  Flame,
 } from "lucide-react";
 import { getCurrentUser } from "@/lib/auth";
 import { getDashboardData } from "@/lib/finance";
@@ -72,6 +74,7 @@ export default async function DashboardPage() {
 
   const quickAdds = [
     { href: "/learn", label: "Learn", icon: GraduationCap },
+    { href: "/achievements", label: "Achievements", icon: Trophy },
     { href: "/coach", label: "AI Coach", icon: Bot },
     { href: "/budget", label: "Budget", icon: PieChart },
     { href: "/accounts", label: "Accounts", icon: Wallet },
@@ -86,12 +89,32 @@ export default async function DashboardPage() {
     .sort((a, b) => a.dueDay - b.dueDay)
     .slice(0, 4);
 
+  const level = appUser.profile?.level ?? 1;
+  const streak = appUser.profile?.learningStreak ?? 0;
+
   return (
     <div>
-      <h1 className="font-display text-3xl font-bold">Welcome, {firstName} 👋</h1>
-      <p className="mt-1 text-muted-foreground">
-        Your live financial snapshot, updated from the data you enter.
-      </p>
+      <div className="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h1 className="font-display text-3xl font-bold">Welcome, {firstName} 👋</h1>
+          <p className="mt-1 text-muted-foreground">
+            Your live financial snapshot, updated from the data you enter.
+          </p>
+        </div>
+        <Link
+          href="/achievements"
+          className="flex items-center gap-3 rounded-2xl border border-border bg-card px-4 py-2.5 text-sm transition-colors hover:bg-muted"
+        >
+          <span className="inline-flex items-center gap-1.5 font-medium">
+            <Trophy className="h-4 w-4 text-brand-600" /> Level {level}
+          </span>
+          {streak > 0 && (
+            <span className="inline-flex items-center gap-1.5 text-muted-foreground">
+              <Flame className="h-4 w-4 text-accent-500" /> {streak}-day streak
+            </span>
+          )}
+        </Link>
+      </div>
 
       {!hasData && (
         <GlassCard className="mt-6 flex flex-col items-start gap-3 p-6 sm:flex-row sm:items-center sm:justify-between">

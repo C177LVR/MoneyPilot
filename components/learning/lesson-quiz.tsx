@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { CheckCircle2, XCircle, Sparkles, Loader2 } from "lucide-react";
+import { CheckCircle2, XCircle, Sparkles, Loader2, Trophy } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { submitLesson, type SubmitLessonResult } from "@/app/actions/learning";
 import type { QuizQuestion } from "@/lib/learning-content";
@@ -140,6 +140,27 @@ export function LessonQuiz({
               <> — score updated. This lesson was already completed, so no new XP was awarded.</>
             )}
           </p>
+        </div>
+      )}
+
+      {showResults && result.newAchievements.length > 0 && (
+        <div className="mt-3 space-y-2">
+          {result.newAchievements.map((a) => (
+            <div
+              key={a.key}
+              className="flex items-center gap-3 rounded-2xl border border-accent-200 bg-accent-50 p-4 dark:border-accent-900/40 dark:bg-accent-950/30"
+            >
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-accent-500/15 text-accent-600">
+                <Trophy className="h-5 w-5" />
+              </span>
+              <p className="text-sm">
+                <span className="font-semibold">Achievement unlocked: {a.title}</span>
+                <span className="block text-xs text-muted-foreground">
+                  {a.description} (+{a.xpReward} XP)
+                </span>
+              </p>
+            </div>
+          ))}
         </div>
       )}
     </Card>

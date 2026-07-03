@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { Prisma, AccountType } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
 import { requireUserId, type ActionState } from "@/lib/action-helpers";
+import { evaluateAndAwardAchievements } from "@/lib/gamification";
 
 const PATHS = ["/accounts", "/dashboard"];
 const revalidate = () => PATHS.forEach((p) => revalidatePath(p));
@@ -49,6 +50,9 @@ export async function saveAccount(
     console.error("saveAccount failed:", err);
     return { error: "Couldn't save the account. Check the database connection." };
   }
+  await evaluateAndAwardAchievements(userId).catch((e) =>
+    console.error("achievement evaluation failed:", e)
+  );
   revalidate();
   return { ok: true };
 }
