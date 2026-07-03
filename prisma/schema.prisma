@@ -32,6 +32,7 @@ model User {
   healthScores  HealthScoreSnapshot[]
   conversations CoachConversation[]
   lessonProgress LessonProgress[]
+  lessonCompletions LessonCompletion[]
   achievements  UserAchievement[]
 }
 
@@ -167,7 +168,23 @@ model CoachMessage {
   createdAt      DateTime @default(now())
 }
 
-// ─── Learning & gamification (Phase 7) ────────────────────
+// ─── Learning & gamification ───────────────────────────────
+// Course/Lesson/LessonProgress below are reserved for a future admin-managed
+// CMS version of the Learning Center. The MVP Learning Center instead keeps
+// lesson content as static, versioned data (lib/learning-content.ts) and
+// tracks per-user progress with the lighter-weight LessonCompletion model,
+// which needs no DB-seeded content and works immediately.
+model LessonCompletion {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lessonSlug  String // "<courseSlug>/<lessonSlug>"
+  quizScore   Int? // percent 0-100
+  completedAt DateTime @default(now())
+
+  @@unique([userId, lessonSlug])
+}
+
 model Course {
   id          String   @id @default(cuid())
   slug        String   @unique

@@ -128,7 +128,8 @@ footer. Fully responsive and mobile-first.
 - [x] **Phase 5** — Budget Builder: draggable categories, planned-allocation pie chart, actual-vs-planned tracking against real transactions, rule-based recommendations, starter category preset
 - [x] **Phase 6** — Debt payoff planner (snowball/avalanche, real debt data, balance-over-time chart) on `/debts`, and a public `/calculators` hub covering all 14 spec calculators (Retirement, Mortgage, Auto Loan, Compound Interest, Savings Growth, Emergency Fund, Net Worth, Debt-to-Income, Rule of 72, Investment Fees, Credit Card Interest, College Savings, plus Budget from Phase 5 and Debt Payoff above)
 - [x] **Phase 7** — AI Money Coach on `/coach`, powered by the real Claude API (`claude-sonnet-5`), grounded in the member's live financial data, teaching-oriented system prompt, persisted conversation history, Decision Coach starter questions, and a lightweight rate limiter
-- [ ] **Later** — Learning Center (23 courses), gamification, reports, tools, admin, Stripe billing, Google/Apple auth
+- [x] **Learning Center** — `/learn`: 9 courses (3 per level: Beginner/Intermediate/Advanced, matching the homepage roadmap), one thorough lesson each with markdown content, a graded quiz, XP/level/streak progress tracking. Content lives in `lib/learning-content.ts` (static, versioned) — additional lessons per course are a content addition, not an engineering one.
+- [ ] **Later** — Remaining lessons per course, gamification (badges/achievements UI), reports, tools, admin, Stripe billing, Google/Apple auth
 
 ## Deployment
 

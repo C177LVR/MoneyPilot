@@ -12,11 +12,13 @@ import {
   PieChart,
   Calculator,
   Bot,
+  GraduationCap,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const items = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
+  { href: "/learn", label: "Learn", icon: GraduationCap },
   { href: "/coach", label: "AI Coach", icon: Bot },
   { href: "/budget", label: "Budget", icon: PieChart },
   { href: "/accounts", label: "Accounts", icon: Wallet },

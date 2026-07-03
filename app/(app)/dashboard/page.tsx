@@ -13,6 +13,7 @@ import {
   BarChart3,
   PieChart,
   Bot,
+  GraduationCap,
 } from "lucide-react";
 import { getCurrentUser } from "@/lib/auth";
 import { getDashboardData } from "@/lib/finance";
@@ -70,6 +71,7 @@ export default async function DashboardPage() {
   ];
 
   const quickAdds = [
+    { href: "/learn", label: "Learn", icon: GraduationCap },
     { href: "/coach", label: "AI Coach", icon: Bot },
     { href: "/budget", label: "Budget", icon: PieChart },
     { href: "/accounts", label: "Accounts", icon: Wallet },
