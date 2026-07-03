@@ -3,10 +3,9 @@
  * (not the database) so the feature works without any DB seeding — per-user
  * progress is tracked separately via the LessonCompletion model.
  *
- * This is a starter set: one thorough lesson per course, covering the same
- * nine courses already promised on the homepage roadmap (three per level).
- * Additional lessons per course are a content addition, not an engineering
- * one — just append to a course's `lessons` array.
+ * Nine courses (three per level) match the homepage roadmap, each with three
+ * lessons. Additional lessons per course are a content addition, not an
+ * engineering one — just append to a course's `lessons` array.
  */
 
 export type Level = "beginner" | "intermediate" | "advanced";
@@ -200,6 +199,79 @@ Regardless of method, automation removes the willpower requirement:
           },
         ],
       },
+      {
+        slug: "cutting-costs-and-boosting-income",
+        title: "Cutting Costs and Growing Your Income",
+        estMinutes: 10,
+        difficulty: "medium",
+        body: `## A budget has two levers, not one
+
+Most budgeting advice focuses entirely on cutting spending, but a budget actually has two sides: what you spend and what you earn. Both are worth working, and they behave differently — cutting has a floor (you can't spend less than zero), while earning more has no ceiling.
+
+## Cutting costs without misery
+
+Skip the "no lattes ever" advice — it targets small, visible purchases while ignoring the bigger, boring wins:
+
+- **Audit recurring subscriptions.** Streaming services, apps, and memberships quietly add up; most people are surprised how many they've forgotten about. Check Money Pilot's **Subscriptions** tool to see the full list and total monthly cost in one place.
+- **Negotiate fixed bills.** Insurance, internet, and phone bills are often negotiable — a five-minute call asking "is there a better rate available" works more often than people expect.
+- **Target your biggest categories first.** A 10% cut on housing or transportation (your largest expenses) usually beats a 50% cut on a small discretionary category.
+- **Watch for lifestyle inflation.** As income rises, spending tends to rise with it by default. Deciding in advance that a raise will go partly to savings — not just to a nicer apartment or car — keeps a raise from quietly disappearing.
+
+## Growing your income
+
+- **Ask for a raise with evidence**, not just tenure — document specific contributions and market rate for your role before the conversation.
+- **Side income** doesn't need to be a full second job — selling unused items, freelancing a skill you already have, or part-time work can meaningfully move the needle, especially applied directly toward a specific goal (debt payoff, an emergency fund).
+- **Skill investment** — courses or certifications that increase your earning potential can pay for themselves many times over, though it's worth being realistic about the time and cost involved before committing.
+
+## Where the extra money should go
+
+Extra income from a raise, side hustle, or windfall is easiest to build wealth with *before* your spending adjusts to it — direct it straight into savings, debt payoff, or investing rather than letting it blend into everyday spending.
+
+## Action items
+
+- Review your subscriptions in Money Pilot and cancel anything you can't remember using in the last month.
+- Pick one fixed bill (insurance, internet, phone) and make one call to ask about a better rate.
+- If you've had a recent raise or windfall, decide right now what percentage goes to savings before it blends into spending.
+- Identify one skill or item you could turn into extra income this month.`,
+        quiz: [
+          {
+            question: "Why does cutting spending have a natural limit that growing income doesn't?",
+            options: [
+              "Cutting spending is always easier than earning more",
+              "Spending can't go below zero, while income has no fixed ceiling",
+              "Income never actually increases over a career",
+              "There's no real difference between the two",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Spending cuts eventually hit a floor at zero, while earning more has no equivalent ceiling — both levers matter, but they behave differently.",
+          },
+          {
+            question: "What's 'lifestyle inflation'?",
+            options: [
+              "Prices rising faster than wages",
+              "Spending automatically rising to match income as income increases",
+              "A government policy on cost of living",
+              "The interest rate on inflation-protected bonds",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Lifestyle inflation is the tendency for spending to creep upward with income unless you deliberately decide otherwise.",
+          },
+          {
+            question: "What's generally the best approach for extra income like a raise or windfall?",
+            options: [
+              "Let it blend into everyday spending automatically",
+              "Direct it toward savings, debt payoff, or investing before spending adjusts to it",
+              "Always spend it immediately on something big",
+              "It doesn't matter what you do with it",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Extra income is easiest to build wealth with before your everyday spending rises to absorb it.",
+          },
+        ],
+      },
     ],
   },
   {
@@ -353,6 +425,81 @@ Treat a withdrawal as a signal to temporarily prioritize refilling it:
           },
         ],
       },
+      {
+        slug: "sinking-funds-for-predictable-expenses",
+        title: "Sinking Funds: Planning for Expenses You Know Are Coming",
+        estMinutes: 9,
+        difficulty: "medium",
+        body: `## Not every big expense is an emergency
+
+Your emergency fund is for the unexpected. But plenty of large expenses are entirely predictable — they just don't happen every month: an annual insurance premium, holiday gifts, a car that will eventually need new tires or a replacement, a biannual dentist bill. Treating these as "emergencies" when they hit drains the fund meant for genuine surprises.
+
+## What a sinking fund is
+
+A sinking fund is money set aside gradually, in small monthly amounts, for a specific known future expense — so that when the bill arrives, it's already covered instead of becoming a scramble or a credit card charge.
+
+**Example:** if your car insurance premium is $600 once a year, saving $50/month in a dedicated sinking fund means the bill is a non-event when it arrives, instead of a surprise hit to your checking account.
+
+## Common sinking funds worth setting up
+
+- **Annual or semi-annual bills** — insurance premiums, subscriptions billed yearly, property taxes if not escrowed.
+- **Holidays and gifts** — a notoriously common source of January credit card debt when unplanned.
+- **Car maintenance and replacement** — tires, brakes, and eventually the car itself.
+- **Home maintenance** — roughly 1-2% of home value per year, as covered in the Real Estate course, ideally set aside monthly rather than found all at once.
+- **Irregular medical or dental costs** — routine but not monthly, like an annual dental visit with out-of-pocket cost.
+
+## Sinking funds vs. emergency fund vs. regular savings
+
+- **Emergency fund** — for the truly unplanned (job loss, unexpected repair, medical emergency).
+- **Sinking funds** — for expenses you already know are coming, just not every month.
+- **Regular savings/investing** — for longer-term goals without a specific near-term due date.
+
+Keeping these separate (even as clearly labeled sub-goals in the same high-yield account) prevents "borrowing" from one purpose to cover another without realizing it.
+
+## Setting one up in Money Pilot
+
+Create a **Goal** for each sinking fund with a target amount (the expense you're saving for) and, if it recurs annually, reset it once the expense is paid — the goal becomes a running tally you refill each year rather than a one-time target.
+
+## Action items
+
+- List any expenses in the past 12 months that felt like a surprise but were actually predictable in hindsight (annual bills, holidays, car maintenance).
+- Divide each by 12 to find the monthly amount you'd need to save to cover it without stress next time.
+- Create at least one sinking fund goal in Money Pilot for your most disruptive recurring expense.
+- Keep sinking funds separate from your emergency fund so neither purpose quietly eats into the other.`,
+        quiz: [
+          {
+            question: "What's the key difference between a sinking fund and an emergency fund?",
+            options: [
+              "There is no real difference",
+              "A sinking fund covers predictable future expenses; an emergency fund covers the truly unplanned",
+              "A sinking fund is only for medical bills",
+              "An emergency fund is always larger",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Sinking funds target known, recurring-but-not-monthly expenses, while an emergency fund exists specifically for genuine surprises.",
+          },
+          {
+            question: "If an annual insurance premium is $600, how much should a sinking fund for it receive per month?",
+            options: ["$600", "$50", "$10", "$5"],
+            correctIndex: 1,
+            explanation:
+              "Dividing the $600 annual cost across 12 months means saving $50/month makes the bill a non-event when it arrives.",
+          },
+          {
+            question: "Why keep sinking funds separate from your emergency fund?",
+            options: [
+              "It's required by banks",
+              "So one purpose doesn't quietly get 'borrowed' from to cover another without realizing it",
+              "Separate accounts always earn more interest",
+              "There's no benefit to separating them",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Clearly labeled, separate sinking funds prevent an emergency withdrawal from accidentally draining money earmarked for a known future bill, or vice versa.",
+          },
+        ],
+      },
     ],
   },
   {
@@ -496,6 +643,84 @@ Be skeptical of companies promising to "fix" your credit for a fee — legitimat
             correctIndex: 1,
             explanation:
               "Disputing real errors is a free process through each credit bureau, and correcting mistakes can meaningfully help your score.",
+          },
+        ],
+      },
+      {
+        slug: "reading-your-credit-report-and-avoiding-fraud",
+        title: "Reading Your Credit Report and Spotting Fraud Early",
+        estMinutes: 10,
+        difficulty: "medium",
+        body: `## Your report vs. your score
+
+Your credit *score* is a single number; your credit *report* is the underlying data it's calculated from. There are three major bureaus (Experian, Equifax, TransUnion), and each maintains its own report — they can differ slightly since not every lender reports to all three. You're entitled to a free report from each bureau, which is worth checking periodically even when nothing seems wrong.
+
+## What's actually on a credit report
+
+- **Personal information** — name, addresses, employers on file (worth checking for typos or unfamiliar entries).
+- **Accounts** — every credit card, loan, and line of credit reported, including balances, limits, and payment history.
+- **Credit inquiries** — hard inquiries (from applications) and soft inquiries (from checks that don't affect your score).
+- **Public records and collections** — bankruptcies, and accounts sent to collections.
+
+## What to actually check for
+
+- **Accounts you don't recognize** — the clearest sign of identity theft.
+- **Incorrect late payments** — a payment marked late that you know was on time.
+- **Wrong balances or limits** — can throw off your utilization calculation unfairly.
+- **Hard inquiries you didn't authorize** — could indicate someone applied for credit in your name.
+
+## Monitoring without paying for it
+
+Many banks and credit card issuers now offer free credit score monitoring built into their apps, and free credit-monitoring services can alert you to new accounts or inquiries. A **credit freeze** (free, and reversible) with each bureau blocks new accounts from being opened in your name entirely — the strongest protection, and worth using anytime you're not actively applying for credit.
+
+## If you find something wrong
+
+1. **Errors:** dispute directly with the bureau reporting it (free, typically resolved within 30-45 days).
+2. **Fraud:** freeze your credit immediately with all three bureaus, file a report with the FTC at IdentityTheft.gov, and contact the specific creditor for any fraudulent account.
+3. **Keep records** of every step — dispute confirmations, dates, and who you spoke with.
+
+## Action items
+
+- Pull your free credit report from at least one bureau this month and scan it line by line.
+- Check whether your bank or card issuer already offers free score monitoring you're not using.
+- If you're not actively applying for credit soon, consider freezing it with all three bureaus.
+- Save the FTC's IdentityTheft.gov as a bookmark in case you ever need it in a hurry.`,
+        quiz: [
+          {
+            question: "What's the difference between a credit report and a credit score?",
+            options: [
+              "They're the same thing",
+              "The report is the underlying data; the score is a single number calculated from it",
+              "The score comes first, and the report is generated from it",
+              "Only the score is available for free",
+            ],
+            correctIndex: 1,
+            explanation:
+              "The report contains the raw account, inquiry, and public-record data — the score is a single number distilled from that data.",
+          },
+          {
+            question: "What does a credit freeze do?",
+            options: [
+              "Permanently closes all your existing accounts",
+              "Blocks new accounts from being opened in your name",
+              "Lowers your credit score temporarily",
+              "Prevents you from checking your own score",
+            ],
+            correctIndex: 1,
+            explanation:
+              "A credit freeze (free and reversible) stops new credit applications in your name from being approved, without affecting existing accounts.",
+          },
+          {
+            question: "What should you do first if you find a fraudulent account on your credit report?",
+            options: [
+              "Ignore it, it will resolve itself",
+              "Freeze your credit with all three bureaus and report it",
+              "Close all your other accounts",
+              "Wait a year before taking action",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Freezing your credit immediately limits further damage, followed by reporting the fraud to the FTC and the specific creditor involved.",
           },
         ],
       },
@@ -661,6 +886,80 @@ Bankruptcy carries stigma, but it exists as a legal tool for genuinely overwhelm
           },
         ],
       },
+      {
+        slug: "student-loans-and-other-special-debt-types",
+        title: "Student Loans and Other Special Debt Situations",
+        estMinutes: 11,
+        difficulty: "medium",
+        body: `## Federal vs. private student loans
+
+Federal student loans come with protections private loans don't: income-driven repayment plans, deferment/forbearance options, and eligibility for forgiveness programs. Private loans (from banks or other lenders) typically have none of these — before doing anything that trades away federal protections, it's worth knowing exactly what you'd be giving up.
+
+## Income-driven repayment (IDR)
+
+Federal IDR plans cap your monthly payment at a percentage of discretionary income rather than a fixed amount, which can meaningfully help during lower-income periods. Remaining balances may be forgiven after a set number of years of qualifying payments — but interest still accrues in the meantime, so it's a safety net for affordability, not necessarily the cheapest path if you can afford standard payments.
+
+## Public Service Loan Forgiveness (PSLF) and other forgiveness paths
+
+Working for a qualifying government or nonprofit employer while making 10 years of qualifying payments under an eligible repayment plan can lead to forgiveness of the remaining federal balance. The rules around qualifying employment and payment plans are strict and have tripped up many applicants historically — if this might apply to you, it's worth confirming your employer and plan actually qualify *before* counting on it, not after 10 years.
+
+## The refinancing trade-off
+
+Refinancing federal loans into a private loan can lower your interest rate if your credit and income are strong — but it permanently gives up federal protections (IDR, forgiveness eligibility, deferment options). This can make sense if you have stable, high income and no realistic use for those protections, but it's not reversible once done.
+
+## Medical debt
+
+Medical debt behaves differently from other debt: providers will often negotiate a lower total or set up an interest-free payment plan if you ask before it goes to collections. Many hospitals also have **financial assistance programs** for lower-income patients that can reduce or eliminate a bill entirely — worth asking about directly, since they're not always advertised.
+
+## Buy now, pay later (BNPL)
+
+BNPL services split a purchase into a few installments, often interest-free if paid on time — but missed payments can trigger fees and, increasingly, credit reporting. The convenience can also make it easy to accumulate several simultaneous BNPL balances without noticing the total, so track them the same way you'd track any other debt.
+
+## Action items
+
+- If you have student loans, confirm whether they're federal, private, or a mix.
+- If income is tight, look into whether an income-driven repayment plan would help.
+- If you work in public service and might qualify for PSLF, verify your employer and plan qualify now, not years from now.
+- If you have any medical bills, call the provider's billing office and ask about a payment plan or financial assistance before it goes to collections.`,
+        quiz: [
+          {
+            question: "What's a key protection that federal student loans have that private loans generally don't?",
+            options: [
+              "Zero interest rates",
+              "Income-driven repayment plans and forgiveness eligibility",
+              "Automatic cancellation after 5 years",
+              "No credit check required ever",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Federal loans offer protections like income-driven repayment and forgiveness programs that private lenders typically don't provide.",
+          },
+          {
+            question: "What's a major risk of refinancing federal student loans into a private loan?",
+            options: [
+              "There's no risk at all",
+              "It permanently gives up federal protections like IDR and forgiveness eligibility",
+              "It always increases your interest rate",
+              "It automatically forgives your debt",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Refinancing to private can lower your rate, but it's a one-way door that trades away federal protections you can't get back.",
+          },
+          {
+            question: "What should you do about a medical bill before it goes to collections?",
+            options: [
+              "Nothing can be done",
+              "Ask the provider's billing office about a payment plan or financial assistance",
+              "Ignore it until it disappears",
+              "Immediately hire a debt settlement company",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Providers often negotiate payment plans or offer financial assistance programs, but asking before collections is key to getting the best outcome.",
+          },
+        ],
+      },
     ],
   },
   {
@@ -813,6 +1112,82 @@ Churning — opening cards primarily to chase sign-up bonuses, then canceling �
             correctIndex: 1,
             explanation:
               "Frequent applications create hard inquiries and can draw scrutiny from issuers — for most people, fewer well-chosen cards work better.",
+          },
+        ],
+      },
+      {
+        slug: "fraud-protection-and-disputing-charges",
+        title: "Fraud Protection and Disputing Charges",
+        estMinutes: 9,
+        difficulty: "easy",
+        body: `## Credit cards vs. debit cards: very different fraud exposure
+
+If a card is compromised, the type of card matters enormously:
+
+- **Credit cards** — federal law caps your liability for unauthorized charges at $50, and in practice most issuers waive even that if reported promptly. Crucially, it's the *bank's* money at risk while a dispute is investigated, not yours.
+- **Debit cards** — draw directly from your checking account. Liability protections exist but are weaker and time-sensitive (liability can rise sharply if you don't report within 2 business days), and the disputed funds are gone from your account during the investigation, not just "on hold."
+
+This is a meaningful reason many financial educators recommend using a credit card (paid in full monthly) for everyday spending over a debit card — the fraud protection gap is real, not just theoretical.
+
+## How disputes actually work
+
+If you spot a charge you didn't make or a charge for goods/services that were never delivered or were defective:
+
+1. **Contact the merchant first** for simple errors — many issues resolve faster this way.
+2. **File a formal dispute (chargeback) with your card issuer** if the merchant won't resolve it, or if it's clearly fraud.
+3. **The issuer investigates**, often issuing a provisional credit while it does, and the charge is typically reversed if the dispute is valid.
+
+Disputes aren't unlimited — repeatedly disputing legitimate charges can flag your account, so use them for genuine issues, not buyer's remorse.
+
+## Everyday habits that reduce fraud risk
+
+- **Review statements regularly** rather than only at the end of the month — catching an unfamiliar charge early makes resolution faster.
+- **Use virtual card numbers** (offered by many issuers) for online purchases — a unique number tied to the same account limits exposure if a specific merchant is breached.
+- **Enable transaction alerts** so you're notified in real time, not after the statement closes.
+- **Freeze a lost or compromised card instantly** through your issuer's app rather than waiting to call.
+
+## Action items
+
+- Check whether your bank offers virtual card numbers for online shopping, and consider using them for less-trusted merchants.
+- Turn on real-time transaction alerts if you haven't already.
+- Review your last statement line by line for anything unfamiliar.
+- Save your card issuer's fraud reporting number somewhere easy to find in a hurry.`,
+        quiz: [
+          {
+            question: "Why do many financial educators recommend a credit card over a debit card for everyday spending?",
+            options: [
+              "Credit cards always have better rewards",
+              "Credit card fraud liability is capped and doesn't pull funds directly from your checking account during a dispute",
+              "Debit cards can't be used online",
+              "There's no real difference in fraud protection",
+            ],
+            correctIndex: 1,
+            explanation:
+              "With a credit card, it's the bank's money at risk during a dispute; with a debit card, the funds are already gone from your account while it's investigated.",
+          },
+          {
+            question: "What's the first step for a simple billing error, like an incorrect charge amount?",
+            options: [
+              "Immediately file a formal dispute with the issuer",
+              "Contact the merchant first to resolve it directly",
+              "Cancel the card entirely",
+              "Ignore it if it's a small amount",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Simple errors often resolve faster by contacting the merchant directly before escalating to a formal chargeback.",
+          },
+          {
+            question: "What's an advantage of using a virtual card number for online purchases?",
+            options: [
+              "It earns extra rewards points",
+              "It limits exposure if a specific merchant's systems are breached",
+              "It removes the need for a real card entirely",
+              "It guarantees free shipping",
+            ],
+            correctIndex: 1,
+            explanation:
+              "A virtual number tied to your real account limits the damage if a merchant you used it with is breached, since that number can be shut off independently.",
           },
         ],
       },
@@ -974,6 +1349,82 @@ An **extension** gives you more time to *file* the paperwork, but not more time 
           },
         ],
       },
+      {
+        slug: "choosing-the-right-insurance-coverage",
+        title: "Choosing the Right Insurance Coverage Amounts",
+        estMinutes: 11,
+        difficulty: "medium",
+        body: `## Having insurance vs. having the right amount
+
+It's not enough to just "have" life or disability insurance — under-insuring leaves a real gap when it matters most, and over-insuring wastes money on premiums for coverage you don't need. Both directions are common mistakes.
+
+## How much life insurance is enough?
+
+A simple starting method is **DIME**:
+- **D**ebt — total debts you'd want covered (excluding a mortgage, handled separately below)
+- **I**ncome — years of income your dependents would need replaced (often 10+ years, or until kids are grown)
+- **M**ortgage — remaining mortgage balance
+- **E**ducation — future education costs for children, if applicable
+
+Add these together for a rough term life coverage target. As covered in Taxes & Insurance Fundamentals, **term life** (covering a specific number of years at a fixed premium) is usually the right fit for this kind of need-based coverage — it's far cheaper than permanent life insurance for the same death benefit, and most people's need for a large payout shrinks once a mortgage is paid off and kids are grown.
+
+## Disability insurance: the most underrated coverage
+
+You're statistically more likely to become disabled and unable to work than to die during your working years, yet far fewer people carry disability coverage than life insurance. A reasonable target is replacing **60-70% of your income** — many employers offer a base policy, but it's worth checking whether it's enough, and whether it's *own-occupation* (pays out if you can't do your specific job) or *any-occupation* (a much higher bar to qualify).
+
+## Deductibles: a direct trade-off with your emergency fund
+
+A higher deductible lowers your premium but raises what you'd pay out of pocket if something happens. This only makes sense if your emergency fund can comfortably absorb that deductible — otherwise a "cheaper" high-deductible plan can turn a covered event into a cash crisis anyway.
+
+## Umbrella policies: cheap protection against big liability
+
+An **umbrella policy** extends liability coverage beyond your auto/home policy limits, covering things like a lawsuit after a serious accident. It's relatively inexpensive (often a few hundred dollars/year for $1 million in coverage) and worth considering once you have meaningful assets to protect, or simply want protection against a catastrophic liability claim exceeding your base policy limits.
+
+## Where people commonly over-insure
+
+- **Extended warranties** on lower-cost electronics — the math rarely favors the buyer; self-insuring (saving the warranty cost instead) is usually better for anything you could replace out of pocket.
+- **Insuring a car you could comfortably replace in cash** with more coverage than needed, rather than adjusting the deductible.
+
+## Action items
+
+- Run a rough DIME calculation to see if your current life insurance (if any) is in the right range.
+- Check whether your disability coverage (employer-provided or not) would actually replace 60-70% of your income, and whether it's own-occupation.
+- Confirm your deductibles are ones your emergency fund could comfortably absorb.
+- If you have meaningful assets, look into whether an umbrella policy makes sense for your situation.`,
+        quiz: [
+          {
+            question: "What does the 'M' in the DIME method for estimating life insurance stand for?",
+            options: ["Money", "Mortgage", "Medical", "Miscellaneous"],
+            correctIndex: 1,
+            explanation:
+              "DIME stands for Debt, Income, Mortgage, and Education — the major categories a term life payout is meant to cover.",
+          },
+          {
+            question: "What's the key trade-off of choosing a higher insurance deductible?",
+            options: [
+              "It has no trade-off — always choose the highest deductible",
+              "Lower premiums, but more out-of-pocket cost if something happens, which needs your emergency fund to cover",
+              "It voids your policy",
+              "It only affects life insurance",
+            ],
+            correctIndex: 1,
+            explanation:
+              "A higher deductible lowers your premium but only makes sense if your emergency fund can comfortably absorb the larger out-of-pocket cost.",
+          },
+          {
+            question: "What does an umbrella policy do?",
+            options: [
+              "Replaces the need for auto and home insurance entirely",
+              "Extends liability coverage beyond your auto/home policy limits",
+              "Covers weather damage specifically",
+              "Only applies to renters",
+            ],
+            correctIndex: 1,
+            explanation:
+              "An umbrella policy adds extra liability protection on top of your existing auto/home limits, often at a relatively low cost.",
+          },
+        ],
+      },
     ],
   },
 
@@ -1132,6 +1583,80 @@ Over time, strong stock performance can drift your portfolio more stock-heavy th
           },
         ],
       },
+      {
+        slug: "robo-advisors-target-date-funds-and-diy-investing",
+        title: "Robo-Advisors, Target-Date Funds, and Choosing Your Approach",
+        estMinutes: 12,
+        difficulty: "hard",
+        body: `## Three reasonable ways to invest
+
+There's no single "correct" way to invest — the right approach depends on how hands-on you want to be, and each option below can be a perfectly sound choice.
+
+### Do-it-yourself index investing
+
+Choosing your own low-cost index funds/ETFs and rebalancing yourself, as covered in the prior two lessons. Full control and typically the lowest fees, but requires actually doing the periodic maintenance (contributing, rebalancing) yourself.
+
+### Target-date funds
+
+A single fund tied to your approximate retirement year (e.g., "2055 Fund") that automatically shifts from stock-heavy to bond-heavy as that date approaches — the "glide path" happens for you. One fund, one purchase, genuinely simple. The trade-off: you're accepting a generic glide path that may not match your specific risk tolerance or other goals, and expense ratios vary meaningfully between providers — check before assuming all target-date funds are equally cheap.
+
+### Robo-advisors
+
+Automated platforms that build and manage a diversified portfolio for you based on a risk questionnaire, handling rebalancing (and sometimes tax-loss harvesting — selling losing positions to offset gains for tax purposes) automatically. Convenient and hands-off, but charge an annual management fee on top of the underlying funds' own expense ratios — worth comparing that combined cost against a comparable DIY or target-date approach.
+
+## When a human financial advisor makes sense
+
+Most people with straightforward goals don't need one, but a human advisor can be worth the cost for complex situations: business ownership, significant inherited wealth, complicated tax situations, or simply wanting a second opinion on a major decision. If you do use one, prioritize a **fee-only fiduciary** — legally required to act in your best interest — over a commission-based advisor, whose compensation can create an incentive to recommend products that pay them more rather than what's genuinely best for you.
+
+## The fee math still applies everywhere
+
+Whichever approach you choose, the expense ratio and any advisory fee compound over decades just like the underlying investment gains do — a 1% total annual cost difference between two comparable approaches can mean a meaningfully smaller nest egg by retirement, even if everything else about the strategy is identical.
+
+## Action items
+
+- If you're currently doing nothing (or not sure what you're invested in), pick one approach above rather than staying on the sidelines.
+- If you use a target-date fund or robo-advisor, check its actual expense ratio and (for robo-advisors) its management fee.
+- If you're considering a financial advisor, specifically ask whether they're a fee-only fiduciary.
+- Re-run the Investment Fees calculator with your actual combined costs to see the long-term impact.`,
+        quiz: [
+          {
+            question: "What does a target-date fund do automatically?",
+            options: [
+              "Guarantees a fixed rate of return",
+              "Shifts from stock-heavy to bond-heavy as the target date approaches",
+              "Picks individual stocks for you",
+              "Eliminates all investment fees",
+            ],
+            correctIndex: 1,
+            explanation:
+              "A target-date fund's 'glide path' automatically becomes more conservative as the fund's target year approaches, without any action needed from you.",
+          },
+          {
+            question: "What's a key extra cost with robo-advisors compared to pure DIY index investing?",
+            options: [
+              "There is no extra cost, ever",
+              "An annual management fee on top of the underlying funds' own expense ratios",
+              "A one-time signup fee only",
+              "Robo-advisors are always more expensive than a human advisor",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Robo-advisors typically charge their own management fee in addition to the expense ratios of the funds they invest you in.",
+          },
+          {
+            question: "Why is a fee-only fiduciary generally preferred over a commission-based advisor?",
+            options: [
+              "Fee-only advisors are always cheaper overall",
+              "They're legally required to act in your best interest, without an incentive to recommend higher-commission products",
+              "Commission-based advisors are illegal",
+              "There's no meaningful difference",
+            ],
+            correctIndex: 1,
+            explanation:
+              "A fiduciary duty legally obligates the advisor to prioritize your interests, unlike commission-based compensation, which can create conflicting incentives.",
+          },
+        ],
+      },
     ],
   },
   {
@@ -1284,6 +1809,80 @@ Traditional 401(k)/IRA accounts require you to start withdrawing a minimum amoun
             correctIndex: 1,
             explanation:
               "RMDs require withdrawals from traditional (not Roth) retirement accounts starting at a certain age, since the government eventually collects deferred taxes on that money.",
+          },
+        ],
+      },
+      {
+        slug: "beyond-the-401k-other-retirement-income-sources",
+        title: "Beyond the 401(k): Other Retirement Income Sources",
+        estMinutes: 11,
+        difficulty: "hard",
+        body: `## Retirement income is usually a mix, not one source
+
+Few people fund retirement entirely from a 401(k) alone. A realistic picture typically blends several sources — Social Security, personal investments, and sometimes a few less-discussed ones below.
+
+## Pensions: less common, but still worth knowing
+
+Traditional pensions (a fixed monthly benefit for life, funded by an employer) have become rare in the private sector but still exist, especially in government and some union jobs. If you have one, a key decision is often **lump sum vs. annuity**: taking a lump sum gives you control and investment flexibility but shifts all the longevity and market risk onto you; taking the guaranteed monthly annuity gives up that flexibility but guarantees income for life. There's no universal right answer — it depends on your other assets, health, and comfort managing a lump sum yourself.
+
+## HSAs as a stealth retirement account
+
+As covered in Taxes & Insurance, a Health Savings Account is triple tax-advantaged. In retirement specifically, an HSA becomes even more flexible: after age 65, you can withdraw funds for *any* purpose penalty-free (though non-medical withdrawals are taxed as income, similar to a traditional IRA), while medical withdrawals remain entirely tax-free at any age. Letting it grow untouched for decades, paying current medical costs out of pocket if you can afford to, maximizes this benefit.
+
+## Taxable brokerage accounts as a bridge
+
+Withdrawals from traditional 401(k)/IRA accounts before age 59½ generally trigger a penalty on top of ordinary income tax. If you're pursuing early retirement, a taxable brokerage account (no withdrawal restrictions, but no tax advantages either) serves as a bridge to cover expenses in the years before you can access retirement accounts penalty-free.
+
+## Home equity and downsizing
+
+For many retirees, home equity represents a significant portion of net worth. Downsizing — selling a larger home and moving to a smaller or lower-cost one — can free up substantial equity to supplement retirement income, though it comes with real trade-offs (moving costs, leaving a familiar community) worth weighing carefully, not just financially.
+
+## Annuities: guaranteed income, at a cost
+
+An annuity is a contract with an insurance company that converts a lump sum into guaranteed income, often for life. They can provide genuine peace of mind against outliving your savings, but often come with high fees, complexity, and limited liquidity — worth understanding thoroughly (and comparing across providers) before committing, since some products are considerably better structured than others.
+
+## Action items
+
+- If you have a pension, research whether it offers a lump sum option and start weighing the trade-offs now, well before you need to decide.
+- If you have an HSA, consider whether you can afford to let it grow untouched rather than spending it on current medical costs.
+- If early retirement is a goal, check whether a taxable brokerage account is part of your bridge plan.
+- If considering an annuity, compare at least two providers and read the fee structure closely before committing.`,
+        quiz: [
+          {
+            question: "What's the core trade-off between taking a pension as a lump sum vs. an annuity?",
+            options: [
+              "There's no real trade-off",
+              "A lump sum gives control and flexibility but shifts risk to you; an annuity guarantees income for life but gives up flexibility",
+              "A lump sum is always the better choice",
+              "Pensions no longer offer either option",
+            ],
+            correctIndex: 1,
+            explanation:
+              "The lump sum shifts investment and longevity risk onto you in exchange for control, while the annuity guarantees income for life but with less flexibility.",
+          },
+          {
+            question: "After age 65, what happens to non-medical withdrawals from an HSA?",
+            options: [
+              "They remain completely tax-free, just like medical withdrawals",
+              "They're taxed as income, similar to a traditional IRA, but without an early-withdrawal penalty",
+              "They're not allowed at all",
+              "They trigger a criminal penalty",
+            ],
+            correctIndex: 1,
+            explanation:
+              "After 65, non-medical HSA withdrawals lose the penalty but are taxed as ordinary income — medical withdrawals remain tax-free at any age.",
+          },
+          {
+            question: "Why might a taxable brokerage account be useful for someone pursuing early retirement?",
+            options: [
+              "It has better tax advantages than a 401(k)",
+              "It has no withdrawal restrictions, bridging expenses before penalty-free access to retirement accounts at 59½",
+              "It guarantees higher returns",
+              "It's required by law for early retirees",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Since traditional retirement accounts penalize withdrawals before 59½, a taxable brokerage account can cover the gap years without that restriction.",
           },
         ],
       },
@@ -1450,6 +2049,84 @@ A **financial power of attorney** lets a person you designate manage your financ
             correctIndex: 1,
             explanation:
               "A financial power of attorney authorizes a designated person to manage your financial affairs if you're unable to do so yourself.",
+          },
+        ],
+      },
+      {
+        slug: "home-equity-heloc-and-refinancing",
+        title: "Home Equity, HELOCs, and Refinancing",
+        estMinutes: 11,
+        difficulty: "hard",
+        body: `## What home equity actually is
+
+Home equity is simply your home's current market value minus what you still owe on the mortgage. It grows two ways: paying down principal over time, and the home's value appreciating — but it's not spendable cash until you borrow against it or sell.
+
+## HELOC vs. home equity loan
+
+Both let you borrow against your equity, but structurally differ:
+
+- **Home equity loan** — a lump sum, fixed interest rate, fixed monthly payment. Predictable, works well for a one-time known expense.
+- **HELOC (home equity line of credit)** — a revolving line you draw from as needed, similar to a credit card, typically with a variable interest rate. Flexible for ongoing or uncertain costs, but payments can rise if rates increase.
+
+Both use your home as collateral — missed payments put the home itself at risk, unlike an unsecured personal loan or credit card.
+
+## When tapping equity makes sense (and when it doesn't)
+
+- **Reasonable case:** funding a home improvement that adds real value, or consolidating high-interest debt *if* paired with a genuine change in spending habits — otherwise you risk running the original debt back up while now also owing against your home.
+- **Riskier case:** funding ongoing lifestyle spending or a depreciating purchase (a car, a vacation) with home equity turns unsecured, dischargeable-in-bankruptcy debt into debt secured by your house — a meaningfully bigger downside if things go wrong.
+
+## Refinancing: the break-even calculation
+
+Refinancing replaces your existing mortgage with a new one, usually to get a lower rate or change the loan term. It isn't free — closing costs typically run 2-5% of the loan amount — so the real question is the **break-even point**: divide the closing costs by your monthly payment savings to find how many months until the refinance actually pays for itself. If you plan to move or sell before that point, refinancing likely isn't worth it.
+
+**Rate-and-term refinance** simply changes your rate and/or term without taking out cash. **Cash-out refinance** borrows more than you currently owe and gives you the difference in cash — useful for major expenses, but it increases your loan balance and resets amortization, often meaning more total interest over the life of the loan even at a lower rate.
+
+## The risk of treating your home like an ATM
+
+Every dollar borrowed against home equity is a dollar of ownership given back, and a dollar that must eventually be repaid, with your home as collateral. It's a legitimate financial tool used deliberately — it becomes a real risk when it's used repeatedly to fund spending that doesn't build lasting value.
+
+## Action items
+
+- If you're considering tapping equity, write down specifically what it's for and whether it builds value or just covers spending.
+- If comparing a HELOC and a home equity loan, match the structure (revolving vs. lump sum) to whether your need is ongoing or one-time.
+- Before refinancing, calculate your break-even point and compare it honestly to how long you plan to stay in the home.
+- Avoid a cash-out refinance for anything that wouldn't otherwise justify taking on more long-term debt.`,
+        quiz: [
+          {
+            question: "What's the main structural difference between a HELOC and a home equity loan?",
+            options: [
+              "They're identical products with different names",
+              "A HELOC is a revolving line of credit, typically variable-rate; a home equity loan is a fixed lump sum with a fixed rate",
+              "A HELOC doesn't use the home as collateral",
+              "A home equity loan can only be used once in a lifetime",
+            ],
+            correctIndex: 1,
+            explanation:
+              "A HELOC works like a revolving line you draw from as needed (often variable-rate), while a home equity loan is a one-time lump sum with fixed terms.",
+          },
+          {
+            question: "How do you calculate a refinance's break-even point?",
+            options: [
+              "Multiply the interest rate by the loan term",
+              "Divide the closing costs by your monthly payment savings",
+              "Subtract the old rate from the new rate",
+              "There's no way to calculate it",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Dividing closing costs by the monthly savings tells you how many months it takes for the refinance to pay for itself.",
+          },
+          {
+            question: "What's the key risk of using home equity to fund a depreciating purchase like a vacation?",
+            options: [
+              "There's no risk since it's tax-deductible",
+              "It converts unsecured debt into debt secured by your home, risking the home itself if unpaid",
+              "It automatically lowers your credit score",
+              "It's illegal in most states",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Borrowing against home equity puts your house up as collateral — a much bigger downside than unsecured debt if repayment becomes a problem.",
           },
         ],
       },
