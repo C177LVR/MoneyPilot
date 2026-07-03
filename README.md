@@ -150,7 +150,8 @@ footer. Fully responsive and mobile-first.
 - [x] **Reports** — `/reports`: Weekly/Monthly/Annual tabs with income-vs-expenses and category charts, a savings-rate trend, investment *contributions* (not portfolio value — no market-value history is tracked), budget adherence for the current period, and trend-based recommendations
 - [x] **Admin panel** — `/admin`: user management (role toggle), platform analytics, a real DB-backed Articles CMS with a public `/blog`, and broadcast notifications (dismissible in-app banner). Managing *lessons/quizzes/calculators* isn't included — see note below.
 - [x] **Subscription Tracker** — `/subscriptions`: recurring charges (weekly/monthly/quarterly/yearly), monthly & annual cost totals, due-soon/overdue flags, and a one-click "Renew" that advances the next charge date by a full billing cycle
-- [ ] **Later** — Remaining lessons per course, budget streaks, other Tools (Financial Calendar, Tax Organizer, Document Vault), Stripe billing, Google/Apple auth
+- [x] **Financial Calendar** — `/calendar`: month-grid view combining bill due dates (recur every month), subscription charges, and goal target dates, with instant client-side month navigation (no server round-trip)
+- [ ] **Later** — Remaining lessons per course, budget streaks, Tax Organizer, Document Vault, Stripe billing, Google/Apple auth
 
 ## Deployment
 

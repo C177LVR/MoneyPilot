@@ -10,6 +10,7 @@ const PROTECTED_PREFIXES = [
   "/learn",
   "/achievements",
   "/reports",
+  "/calendar",
   "/coach",
   "/budget",
   "/accounts",

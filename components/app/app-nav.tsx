@@ -17,11 +17,13 @@ import {
   FileBarChart,
   ShieldCheck,
   Repeat,
+  CalendarDays,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const items = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
+  { href: "/calendar", label: "Calendar", icon: CalendarDays },
   { href: "/reports", label: "Reports", icon: FileBarChart },
   { href: "/learn", label: "Learn", icon: GraduationCap },
   { href: "/achievements", label: "Achievements", icon: Trophy },

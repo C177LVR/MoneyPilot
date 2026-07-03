@@ -18,6 +18,7 @@ import {
   Flame,
   FileBarChart,
   Repeat,
+  CalendarDays,
 } from "lucide-react";
 import { getCurrentUser } from "@/lib/auth";
 import { getDashboardData } from "@/lib/finance";
@@ -75,6 +76,7 @@ export default async function DashboardPage() {
   ];
 
   const quickAdds = [
+    { href: "/calendar", label: "Calendar", icon: CalendarDays },
     { href: "/reports", label: "Reports", icon: FileBarChart },
     { href: "/learn", label: "Learn", icon: GraduationCap },
     { href: "/achievements", label: "Achievements", icon: Trophy },
