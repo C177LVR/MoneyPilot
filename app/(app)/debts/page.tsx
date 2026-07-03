@@ -3,6 +3,7 @@ import { requireUserId } from "@/lib/action-helpers";
 import { prisma } from "@/lib/prisma";
 import { PageHeader } from "@/components/app/page-header";
 import { DebtManager, type DebtView } from "@/components/finances/debt-manager";
+import { DebtPayoffPlanner } from "@/components/finances/debt-payoff-planner";
 
 export const metadata: Metadata = {
   title: "Debts",
@@ -28,9 +29,12 @@ export default async function DebtsPage() {
     <div>
       <PageHeader
         title="Debts"
-        subtitle="Track what you owe. Phase 6 adds snowball and avalanche payoff plans."
+        subtitle="Track what you owe and build a snowball or avalanche payoff plan."
       />
       <DebtManager debts={view} />
+      <div className="mt-8">
+        <DebtPayoffPlanner debts={view} />
+      </div>
     </div>
   );
 }

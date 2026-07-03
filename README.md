@@ -104,7 +104,7 @@ footer. Fully responsive and mobile-first.
 - [x] **Phase 3** — App shell (sidebar) + manual data entry with full CRUD for accounts, transactions, debts, goals, and bills, feeding a real summary dashboard
 - [x] **Phase 4** — Financial Health Score (0-100, 7 weighted factors + recommendations) and Chart.js dashboard visualizations (income vs expenses, spending by category)
 - [x] **Phase 5** — Budget Builder: draggable categories, planned-allocation pie chart, actual-vs-planned tracking against real transactions, rule-based recommendations, starter category preset
-- [ ] **Phase 6** — Debt payoff (snowball/avalanche), Retirement planner, calculators
+- [x] **Phase 6** — Debt payoff planner (snowball/avalanche, real debt data, balance-over-time chart) on `/debts`, and a public `/calculators` hub covering all 14 spec calculators (Retirement, Mortgage, Auto Loan, Compound Interest, Savings Growth, Emergency Fund, Net Worth, Debt-to-Income, Rule of 72, Investment Fees, Credit Card Interest, College Savings, plus Budget from Phase 5 and Debt Payoff above)
 - [ ] **Phase 7** — AI Money Coach (Claude) + Decision Coach
 - [ ] **Later** — Learning Center (23 courses), gamification, reports, tools, admin, Stripe billing, Google/Apple auth
 

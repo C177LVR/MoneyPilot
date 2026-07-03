@@ -10,6 +10,7 @@ import {
   Target,
   CalendarClock,
   PieChart,
+  Calculator,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -21,6 +22,7 @@ const items = [
   { href: "/debts", label: "Debts", icon: TrendingDown },
   { href: "/goals", label: "Goals", icon: Target },
   { href: "/bills", label: "Bills", icon: CalendarClock },
+  { href: "/calculators", label: "Calculators", icon: Calculator },
 ];
 
 export function AppNav() {

@@ -64,3 +64,25 @@ export const MoneyInput = React.forwardRef<
     </div>
   );
 });
+
+/** A percentage input with a trailing % sign. */
+export const PercentInput = React.forwardRef<
+  HTMLInputElement,
+  React.InputHTMLAttributes<HTMLInputElement>
+>(function PercentInput({ className, ...props }, ref) {
+  return (
+    <div className="relative">
+      <input
+        ref={ref}
+        type="number"
+        step="0.01"
+        inputMode="decimal"
+        className={cn(baseField, "pr-8", className)}
+        {...props}
+      />
+      <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground">
+        %
+      </span>
+    </div>
+  );
+});
