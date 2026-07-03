@@ -123,6 +123,83 @@ If your actual needs are running at $2,600, that's useful information — it tel
           },
         ],
       },
+      {
+        slug: "budgeting-methods-that-stick",
+        title: "Budgeting Methods That Actually Stick",
+        estMinutes: 11,
+        difficulty: "medium",
+        body: `## Why budgets fail (and how to pick one that won't)
+
+Most abandoned budgets don't fail because of bad math — they fail because the method didn't match how the person actually thinks about money. There's no single "correct" budgeting method. Here are four proven approaches; pick the one that fits your brain.
+
+## Zero-based budgeting
+
+Every dollar of income gets assigned a job — including savings — until income minus assignments equals zero. Not "spend it all," but "every dollar has a purpose, even if that purpose is savings." This is the most precise method and works well for people who like detail and control.
+
+## The envelope method (physical or digital)
+
+Divide spending money into categories ("envelopes") — when an envelope is empty, spending in that category stops until next month. Historically literal cash envelopes; today, many banking apps offer digital sub-accounts that work the same way. Great for people who overspend on discretionary categories like dining or shopping.
+
+## Pay-yourself-first
+
+Automate savings and investing transfers the moment income arrives, then spend freely from what's left — no detailed tracking required. Simpler than zero-based budgeting, and effective for people who find detailed tracking tedious but are disciplined about automation.
+
+## The irregular-income budget
+
+If your income varies month to month (freelance, commission, gig work), build your budget around your **lowest realistic month**, not your average. In higher-earning months, the surplus goes to savings, debt payoff, or a buffer account you draw from during leaner months — smoothing out the feast-or-famine cycle.
+
+## Automating the boring parts
+
+Regardless of method, automation removes the willpower requirement:
+- Auto-transfer savings on payday, before you can spend it.
+- Auto-pay fixed bills so nothing is missed.
+- Set calendar reminders to review your budget monthly — a five-minute check-in, not a full rebuild.
+
+## Action items
+
+- Pick one method above that matches how you think, not the "best" one on paper.
+- If your income is irregular, calculate your lowest realistic month as your budget baseline.
+- Automate at least one savings transfer to happen on payday.
+- Put a recurring monthly reminder on your calendar to review — not redo — your budget.`,
+        quiz: [
+          {
+            question: "What's the core idea behind zero-based budgeting?",
+            options: [
+              "Spend every dollar on wants",
+              "Every dollar gets assigned a job until income minus assignments equals zero",
+              "Keep your bank balance at zero at all times",
+              "Only track expenses over $0",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Zero-based budgeting assigns every dollar a purpose — including savings — so nothing is unaccounted for.",
+          },
+          {
+            question: "For irregular income, what should your budget be based on?",
+            options: [
+              "Your highest-earning month",
+              "Your average month",
+              "Your lowest realistic month",
+              "Last year's total income divided by 12",
+            ],
+            correctIndex: 2,
+            explanation:
+              "Budgeting around your lowest realistic month prevents overcommitting in lean months; surplus in good months builds a buffer.",
+          },
+          {
+            question: "Why does automating savings transfers tend to work better than manual tracking for some people?",
+            options: [
+              "It removes the need for willpower by moving money before it can be spent",
+              "It's required by all banks",
+              "It eliminates the need for an emergency fund",
+              "It guarantees higher investment returns",
+            ],
+            correctIndex: 0,
+            explanation:
+              "Automation takes the decision out of your hands each month — the money moves before it becomes available to spend.",
+          },
+        ],
+      },
     ],
   },
   {
@@ -204,6 +281,78 @@ Not in your checking account (too easy to spend) and not invested in stocks (too
           },
         ],
       },
+      {
+        slug: "where-to-keep-it-and-how-to-use-it",
+        title: "Where to Keep It and How to Use It Wisely",
+        estMinutes: 9,
+        difficulty: "medium",
+        body: `## Choosing a high-yield savings account
+
+Not all savings accounts are equal. A typical big-bank savings account might pay a fraction of a percent in interest; online high-yield savings accounts (HYSAs) often pay meaningfully more, with no added risk — both are FDIC-insured up to $250,000. When shopping for one, look at:
+
+- **APY (annual percentage yield)** — the actual return you'll earn.
+- **No monthly fees or minimum balance requirements.**
+- **Easy transfers** — you want quick access in a real emergency, typically 1-2 business days for an external transfer.
+
+## What actually counts as an emergency
+
+The fund loses its purpose if it becomes a general "extra spending" account. A helpful test: is the expense **unexpected**, **necessary**, and **urgent**? A car repair needed to get to work: yes. A vacation deal: no, that's a planned want — budget for it separately. A concert ticket you forgot to save for: no. A medical bill: yes.
+
+## Using it without guilt
+
+If a real emergency hits, use the fund — that's exactly what it's for. Many people feel reluctant to "break" a fund they worked hard to build, but an unused emergency fund that forces you into credit card debt during a crisis has failed at its one job.
+
+## Replenishing after you use it
+
+Treat a withdrawal as a signal to temporarily prioritize refilling it:
+1. Pause other discretionary savings goals temporarily.
+2. Redirect any windfalls (tax refund, bonus) toward rebuilding it first.
+3. Set a target timeline — most people can rebuild a partial withdrawal within a few months of focused effort.
+
+## Action items
+
+- If your emergency fund isn't in a high-yield account, compare a few HYSA options and consider moving it.
+- Write down your personal definition of "emergency" so future-you doesn't have to decide under stress.
+- If you've had to use your fund recently, set a specific rebuild timeline and target amount.`,
+        quiz: [
+          {
+            question: "What's a key advantage of a high-yield savings account over a typical big-bank savings account?",
+            options: [
+              "Higher risk for higher potential reward",
+              "Meaningfully more interest with no added risk (still FDIC-insured)",
+              "No access to your money for a full year",
+              "Guaranteed stock-market-level returns",
+            ],
+            correctIndex: 1,
+            explanation:
+              "HYSAs typically pay significantly more interest than standard savings accounts while remaining just as safe (FDIC-insured).",
+          },
+          {
+            question: "Which of these best fits the 'unexpected, necessary, and urgent' test for using an emergency fund?",
+            options: [
+              "A last-minute vacation deal",
+              "A car repair needed to get to work",
+              "Concert tickets going on sale",
+              "A new phone because you want the latest model",
+            ],
+            correctIndex: 1,
+            explanation:
+              "A necessary repair that's both unexpected and urgent is exactly what an emergency fund is meant to cover.",
+          },
+          {
+            question: "What should you do after using part of your emergency fund?",
+            options: [
+              "Nothing — it did its job, leave it as is",
+              "Close the account since it's been 'used'",
+              "Prioritize rebuilding it, including directing windfalls toward it",
+              "Move the remaining balance into stocks",
+            ],
+            correctIndex: 2,
+            explanation:
+              "Treat a withdrawal as a cue to refocus on rebuilding the fund, so it's ready for the next real emergency.",
+          },
+        ],
+      },
     ],
   },
   {
@@ -277,6 +426,76 @@ Because payment history and utilization together make up 65% of your score, focu
             correctIndex: 0,
             explanation:
               "Under 30% is good, but under 10% is considered excellent for maximizing your score.",
+          },
+        ],
+      },
+      {
+        slug: "building-credit-from-scratch-or-after-setbacks",
+        title: "Building Credit From Scratch (or After Setbacks)",
+        estMinutes: 10,
+        difficulty: "medium",
+        body: `## Starting with no credit history
+
+No credit history isn't the same as bad credit — it just means there's nothing yet for a score to be built from. A few reliable starting points:
+
+- **Secured credit card** — you put down a cash deposit (often $200-500) that becomes your credit limit. Used responsibly and paid in full monthly, it reports to the credit bureaus just like a normal card, and many issuers "graduate" you to an unsecured card after 6-12 months.
+- **Becoming an authorized user** — a family member with good credit adds you to their card. Their positive history can appear on your report too. Choose this only with someone who reliably pays on time — their habits become part of your history.
+- **Credit-builder loan** — offered by many credit unions and online lenders: you "borrow" a small amount that sits in a locked account while you make payments, and you get the money (plus, sometimes, interest) at the end. The payments build payment history without any real spending risk.
+
+## Recovering after missed payments or setbacks
+
+A rough patch (missed payments, a collections account, even a bankruptcy) isn't permanent. Recovery steps:
+
+1. **Get current and stay current.** Payment history matters more than any single derogatory mark, and its impact fades over time as long as newer payments are on time.
+2. **Dispute genuine errors.** Review your credit reports (all three bureaus — you're entitled to free reports) for mistakes: an account that isn't yours, a payment marked late that wasn't. Disputing errors is free and can meaningfully help.
+3. **Don't close old accounts** you're trying to rebuild with, since length of history and total available credit both matter.
+4. **Be patient with timelines.** Most negative marks fall off credit reports after seven years (bankruptcy can be up to ten), but their *impact* on your score shrinks well before then as you build new positive history.
+
+## A word on credit repair companies
+
+Be skeptical of companies promising to "fix" your credit for a fee — legitimate error disputes are free and you can do them yourself. If a company promises to remove *accurate* negative information, that's a red flag.
+
+## Action items
+
+- If you have no credit history, look into a secured card or credit-builder loan at a local credit union.
+- Pull your free credit reports and check for any errors worth disputing.
+- If you're rebuilding after a setback, focus on months of consistent on-time payments — consistency matters more than any single fix.`,
+        quiz: [
+          {
+            question: "How does a secured credit card typically work?",
+            options: [
+              "You pay a monthly fee with no deposit",
+              "You put down a cash deposit that becomes your credit limit",
+              "It never reports to credit bureaus",
+              "It requires an existing good credit score to open",
+            ],
+            correctIndex: 1,
+            explanation:
+              "A secured card uses your cash deposit as the credit limit, reducing risk to the issuer while still building real credit history.",
+          },
+          {
+            question: "What's the biggest risk of becoming an authorized user on someone else's card?",
+            options: [
+              "There's no risk at all",
+              "It always hurts your credit",
+              "Their payment habits (good or bad) can affect your credit too",
+              "It's illegal in most states",
+            ],
+            correctIndex: 2,
+            explanation:
+              "Because their account history can appear on your report, choose this only with someone who reliably pays on time.",
+          },
+          {
+            question: "What's true about disputing genuine errors on your credit report?",
+            options: [
+              "It costs a fee to the credit bureau",
+              "It's free and you can do it yourself",
+              "Only a credit repair company can do it",
+              "It never actually changes your score",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Disputing real errors is a free process through each credit bureau, and correcting mistakes can meaningfully help your score.",
           },
         ],
       },
@@ -363,6 +582,85 @@ Money Pilot's **Debts** page has a built-in payoff planner — enter your real d
           },
         ],
       },
+      {
+        slug: "negotiating-with-creditors-and-avoiding-traps",
+        title: "Negotiating With Creditors and Avoiding Debt Traps",
+        estMinutes: 11,
+        difficulty: "medium",
+        body: `## You can call and ask for help
+
+Many people don't realize creditors would often rather work with you than have you default entirely. If you're struggling, call and ask about:
+
+- **Hardship programs** — temporarily reduced payments or interest rates for borrowers facing job loss, medical issues, or other hardship.
+- **Interest rate reductions** — especially if you have a solid payment history, some card issuers will lower your APR if you simply ask.
+- **Payment plans** — for medical debt in particular, providers will often set up an interest-free payment plan if you ask before the bill goes to collections.
+
+Call before you miss a payment, not after — issuers have more flexibility to help proactively than after an account is already delinquent.
+
+## Balance transfers and consolidation loans
+
+- **Balance transfer cards** move high-interest credit card debt to a card with a 0% promotional APR (often 12-21 months), usually for a 3-5% transfer fee. This can save significant interest **if** you pay it off before the promo period ends — otherwise, the deferred interest can be steep.
+- **Debt consolidation loans** combine multiple debts into a single fixed-rate, fixed-term loan — useful for simplifying payments and potentially lowering your rate, but only helps if you don't run the paid-off cards back up afterward.
+
+Both tools move debt around — they don't reduce what you owe. They're worth it only when the new terms are genuinely better and you have a plan to avoid re-accumulating the old debt.
+
+## Red flags: debt settlement companies
+
+Companies that promise to "settle your debt for pennies on the dollar" often:
+- Tell you to **stop paying your creditors** while they negotiate — which tanks your credit and racks up late fees and interest in the meantime.
+- Charge large upfront fees regardless of outcome.
+- Cannot guarantee any specific settlement amount.
+
+If you're considering this route, a **nonprofit credit counseling agency** (not a for-profit settlement company) is a safer first call — many offer free consultations and structured debt management plans.
+
+## When bankruptcy might be the right tool
+
+Bankruptcy carries stigma, but it exists as a legal tool for genuinely overwhelming debt. It's worth exploring with a qualified attorney (many offer free consultations) if debt payments consistently exceed what any realistic budget or negotiation could resolve, and other options have been exhausted. It has real credit consequences, but for some situations, it's the fastest path to a genuine fresh start.
+
+## Action items
+
+- If you're struggling with a specific debt, call the creditor and ask about hardship options before missing a payment.
+- Before a balance transfer or consolidation loan, calculate whether you can realistically pay it off in the new terms.
+- If you're considering debt settlement, contact a nonprofit credit counseling agency first for a free comparison.`,
+        quiz: [
+          {
+            question: "When is the best time to call a creditor about hardship options?",
+            options: [
+              "After you've missed several payments",
+              "Before you miss a payment",
+              "Only after the account goes to collections",
+              "It never makes a difference",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Creditors have more flexibility to help proactively — call before missing a payment, not after.",
+          },
+          {
+            question: "What's a key risk of a 0% balance transfer card?",
+            options: [
+              "It has no risk at all",
+              "Deferred interest can be steep if not paid off before the promo period ends",
+              "It automatically reduces your credit score to zero",
+              "It's illegal in most states",
+            ],
+            correctIndex: 1,
+            explanation:
+              "If the balance isn't paid off within the promotional window, the deferred interest can significantly add to what you owe.",
+          },
+          {
+            question: "What's a red flag of a for-profit debt settlement company?",
+            options: [
+              "They offer a free consultation",
+              "They tell you to stop paying your creditors while they negotiate",
+              "They are a nonprofit organization",
+              "They charge no fees",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Telling clients to stop paying creditors while settlement is 'negotiated' often damages credit and racks up fees and interest in the meantime.",
+          },
+        ],
+      },
     ],
   },
   {
@@ -442,6 +740,79 @@ A 2% cashback card is not a reason to spend more. If a card's rewards are nudgin
             correctIndex: 1,
             explanation:
               "New purchases on a card that's already carrying a balance compound the debt and accrue more interest.",
+          },
+        ],
+      },
+      {
+        slug: "choosing-and-managing-multiple-cards",
+        title: "Choosing the Right Card and Managing Multiple Cards",
+        estMinutes: 10,
+        difficulty: "medium",
+        body: `## Matching a card to your actual spending
+
+The "best" rewards card is the one that matches where you *actually* spend, not the one with the flashiest sign-up bonus. Before choosing:
+
+1. Look at 2-3 months of real spending by category (Money Pilot's Transactions and category breakdown make this easy).
+2. Match your top categories (groceries, gas, dining, travel) to a card that rewards those specifically, rather than a generic flat-rate card that may reward less overall.
+3. Compare the **annual fee math**: a $95/year card with 3% back on groceries only beats a no-fee 1.5% flat card if your grocery spending is high enough to make up the fee — do the actual arithmetic before applying.
+
+## The annual fee break-even calculation
+
+Example: a card charges a $95 annual fee but earns an extra 1.5 percentage points on $500/month of groceries ($6,000/year). Extra rewards = $6,000 × 1.5% = $90/year — which is *less* than the $95 fee. In this case, the no-fee card wins unless the card has other valuable perks (airport lounge access, travel credits) that offset the gap.
+
+## Managing multiple cards without losing track
+
+Multiple cards can boost your total available credit (helping utilization) and diversify rewards, but add complexity:
+
+- **Automate at least the minimum payment** on every card so a forgotten one never becomes a late payment.
+- **Track due dates** in one place — Money Pilot's Bills or Calendar tools work well for this.
+- Periodically review whether each card still earns its keep, especially ones with annual fees.
+
+## The risk of "credit card churning"
+
+Churning — opening cards primarily to chase sign-up bonuses, then canceling — can occasionally make sense for people who are highly organized, but carries real risk: each application is a hard inquiry (temporary score dip), and issuers increasingly track and restrict frequent applicants. For most people, 1-3 well-chosen cards used consistently build stronger credit than a rotating churn strategy.
+
+## Action items
+
+- Pull up your last 2-3 months of spending by category and see where a rewards card would actually help.
+- If you have an annual-fee card, do the break-even math to confirm it's still worth it.
+- If you hold multiple cards, make sure autopay is set up on every single one.`,
+        quiz: [
+          {
+            question: "What should primarily drive which rewards card you choose?",
+            options: [
+              "The card with the biggest sign-up bonus, regardless of spending",
+              "Matching the card's reward categories to your actual spending patterns",
+              "Always choosing the card with the highest annual fee",
+              "Whichever card is advertised most often",
+            ],
+            correctIndex: 1,
+            explanation:
+              "A card's rewards only pay off if they match where you genuinely spend the most — check your real spending first.",
+          },
+          {
+            question: "In the annual fee break-even example, why did the no-fee card win?",
+            options: [
+              "The fee card had no rewards at all",
+              "The extra rewards earned ($90) didn't exceed the annual fee ($95)",
+              "No-fee cards always win",
+              "The fee card was declined",
+            ],
+            correctIndex: 1,
+            explanation:
+              "The extra rewards from the fee card fell short of the fee itself, so the no-fee card came out ahead in this case.",
+          },
+          {
+            question: "What's a real risk of 'credit card churning' (opening cards for bonuses, then canceling)?",
+            options: [
+              "It has zero downside",
+              "Each application causes a hard inquiry, and issuers may restrict frequent applicants",
+              "It's illegal",
+              "It guarantees a lower credit score permanently",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Frequent applications create hard inquiries and can draw scrutiny from issuers — for most people, fewer well-chosen cards work better.",
           },
         ],
       },
@@ -525,6 +896,81 @@ A Health Savings Account (if you have a qualifying high-deductible health plan) 
             correctIndex: 1,
             explanation:
               "HSAs are the only account offering all three tax advantages at once, making them a powerful long-term tool when available.",
+          },
+        ],
+      },
+      {
+        slug: "common-deductions-and-filing-smart",
+        title: "Common Deductions and Filing Smart",
+        estMinutes: 12,
+        difficulty: "medium",
+        body: `## Standard deduction vs. itemizing
+
+Every filer can take the **standard deduction** — a flat amount that reduces taxable income, no receipts required. Alternatively, you can **itemize** specific deductible expenses (mortgage interest, state/local taxes up to a cap, charitable donations, certain medical expenses above a threshold) if their total exceeds the standard deduction. Most filers come out ahead with the standard deduction; itemizing tends to help homeowners with significant mortgage interest or people with large charitable giving.
+
+## Common deductions and credits worth knowing
+
+- **Retirement contributions** (traditional 401(k)/IRA) reduce taxable income directly.
+- **HSA contributions** are also deductible (or pre-tax if through payroll).
+- **Student loan interest** — up to a capped amount may be deductible even without itemizing, subject to income limits.
+- **Child Tax Credit / Earned Income Tax Credit** — credits reduce your tax bill dollar-for-dollar (more valuable than a deduction of the same amount), and many eligible people miss them.
+- **Educator expenses, self-employed health insurance, and business expenses** — apply to specific situations but are easy to overlook.
+
+Deductions reduce *taxable income*; credits reduce the *tax owed* directly — a $1,000 credit is worth more than a $1,000 deduction.
+
+## Filing status matters more than people realize
+
+Married filing jointly vs. separately, head of household vs. single — your filing status changes your standard deduction, tax brackets, and eligibility for various credits. Life changes (marriage, a new dependent, divorce) are worth revisiting your status for.
+
+## Self-employment and estimated taxes
+
+If you have significant self-employment or freelance income, taxes aren't withheld automatically — you're generally expected to make **quarterly estimated payments** to avoid a penalty at filing time. Self-employment also comes with an additional self-employment tax (covering both the employer and employee portions of Social Security/Medicare), but you can typically deduct qualifying business expenses against that income.
+
+## When you can't file on time
+
+An **extension** gives you more time to *file* the paperwork, but not more time to *pay* what you owe — estimate and pay by the original deadline to avoid interest and penalties, then file the completed return later.
+
+## Action items
+
+- Estimate whether itemizing would beat your standard deduction this year (mortgage interest + donations + eligible medical, if any).
+- If you're self-employed, confirm you're on track with quarterly estimated payments.
+- Check whether you're eligible for credits you might be missing, like the Earned Income Tax Credit.`,
+        quiz: [
+          {
+            question: "What's the difference between a tax deduction and a tax credit?",
+            options: [
+              "They're the same thing",
+              "A deduction reduces taxable income; a credit reduces the tax owed directly (more valuable dollar-for-dollar)",
+              "A credit only applies to businesses",
+              "A deduction is always worth more than a credit",
+            ],
+            correctIndex: 1,
+            explanation:
+              "A credit reduces your tax bill directly, dollar for dollar, making it more valuable than a same-size deduction, which only reduces taxable income.",
+          },
+          {
+            question: "What does a tax filing extension actually give you more time for?",
+            options: [
+              "More time to pay what you owe, with no penalty",
+              "More time to file the paperwork, not more time to pay",
+              "It cancels your tax liability",
+              "It only applies to business owners",
+            ],
+            correctIndex: 1,
+            explanation:
+              "An extension postpones the filing deadline, but you still need to estimate and pay what you owe by the original due date to avoid penalties.",
+          },
+          {
+            question: "Why do self-employed people typically need to make quarterly estimated tax payments?",
+            options: [
+              "Because self-employment income isn't taxed at all",
+              "Because no taxes are automatically withheld from that income",
+              "Only if they earn over $1 million",
+              "It's optional and rarely done",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Without an employer withholding taxes, self-employed individuals generally need to pay estimated taxes quarterly to avoid a penalty.",
           },
         ],
       },
@@ -613,6 +1059,79 @@ For most long-term goals (10+ years out), a low-cost, broadly diversified index 
           },
         ],
       },
+      {
+        slug: "building-and-managing-your-portfolio",
+        title: "Building and Managing Your Portfolio",
+        estMinutes: 13,
+        difficulty: "hard",
+        body: `## Asset allocation by timeline, not age alone
+
+A common rule of thumb is "110 minus your age" as a rough starting percentage in stocks, with the rest in bonds — but your actual **timeline for each goal** matters more than age alone. Retirement 30 years out can handle more stock volatility than a house down payment needed in 18 months, even for the same person at the same age.
+
+- **Long timeline (10+ years):** can typically afford a stock-heavy allocation.
+- **Medium timeline (3-10 years):** a mix of stocks and bonds, gradually shifting more conservative as the goal nears.
+- **Short timeline (under 3 years):** minimal stock exposure — a market downturn right before you need the money could derail the goal.
+
+## Rebalancing: keeping your allocation on target
+
+Over time, strong stock performance can drift your portfolio more stock-heavy than intended (e.g., a target 70/30 stock/bond split creeping to 80/20). **Rebalancing** — periodically selling a bit of what's grown and buying more of what hasn't — brings you back to your target and enforces a disciplined "sell high, buy low" habit. Once or twice a year is typically sufficient; more frequent rebalancing mostly just adds transaction costs and complexity.
+
+## Tax-advantaged vs. taxable accounts
+
+- **Tax-advantaged accounts** (401(k), IRA) are generally the first place to invest, since they reduce taxes now or in retirement.
+- **Taxable brokerage accounts** have no contribution limits and full flexibility, but investment gains are taxed — useful once tax-advantaged accounts are maxed, or for goals before retirement age where you need penalty-free access.
+
+## Common investor mistakes to avoid
+
+- **Panic-selling during a downturn** — locking in losses that would likely have recovered given time; markets have historically trended upward over long periods despite short-term drops.
+- **Chasing recent performance** — a fund's strong last year doesn't predict its next year.
+- **Checking your portfolio too often** — daily checking amplifies emotional reactions to normal volatility; a quarterly or annual review is usually enough for long-term goals.
+- **Ignoring fees** — even a 1% difference in annual fees compounds into a large gap over decades (see the Investment Fees calculator).
+
+## Action items
+
+- For each of your goals, note its timeline and whether your current allocation actually matches it.
+- Set a calendar reminder to review and rebalance your portfolio once or twice a year — not more often.
+- If you haven't checked your investment fees recently, run them through the Investment Fees calculator.`,
+        quiz: [
+          {
+            question: "What matters more than age alone when deciding asset allocation for a specific goal?",
+            options: [
+              "Your favorite stock ticker",
+              "The timeline until you need the money for that goal",
+              "How much your friends are invested in stocks",
+              "The current day of the week",
+            ],
+            correctIndex: 1,
+            explanation:
+              "A goal's timeline — not just your age — determines how much volatility you can afford to take on for that specific goal.",
+          },
+          {
+            question: "What does 'rebalancing' a portfolio mean?",
+            options: [
+              "Selling everything and starting over",
+              "Periodically adjusting holdings back to your target allocation",
+              "Only buying stocks that went up recently",
+              "Moving all funds into cash",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Rebalancing brings your portfolio back to its target mix after market movements shift the balance, enforcing a disciplined sell-high, buy-low habit.",
+          },
+          {
+            question: "What's a common, costly investor mistake during a market downturn?",
+            options: [
+              "Staying the course with a long-term plan",
+              "Panic-selling and locking in losses",
+              "Rebalancing once a year",
+              "Continuing regular contributions",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Panic-selling during a downturn locks in losses that would likely have recovered over time, given markets' historical long-term trend.",
+          },
+        ],
+      },
     ],
   },
   {
@@ -696,6 +1215,75 @@ Also account for **Social Security** — for most people it replaces a meaningfu
             correctIndex: 1,
             explanation:
               "The 4% rule implies a target of about 25x your annual spending need, so that a 4% annual withdrawal sustains the portfolio.",
+          },
+        ],
+      },
+      {
+        slug: "retirement-timeline-planning",
+        title: "Retirement Timeline Planning: Early, On-Time, or Delayed",
+        estMinutes: 12,
+        difficulty: "hard",
+        body: `## Social Security: when to claim
+
+You can claim Social Security as early as 62, at your "full retirement age" (66-67 depending on birth year), or as late as 70. Each year you delay past full retirement age increases your monthly benefit by roughly 8% — claiming at 70 instead of 62 can mean a substantially larger check for life. The "right" age depends on your health, other income sources, and whether you need the money sooner — there's no universally correct answer, but understanding the trade-off matters.
+
+## Catch-up contributions
+
+Once you turn 50, the IRS allows **catch-up contributions** — extra amounts beyond the normal annual limit — to 401(k)s and IRAs. If you got a late start on retirement saving, these higher limits are a meaningful way to accelerate your progress in your final working years.
+
+## The FIRE movement: retiring earlier than traditional
+
+"FIRE" (Financial Independence, Retire Early) is built on aggressive savings rates (often 50%+ of income) to reach a portfolio large enough to sustain the 4% rule decades before traditional retirement age. It's not for everyone — it requires high income, low expenses, or both — but the underlying principles (high savings rate, low fees, index investing) benefit anyone, even without the "retire at 35" goal.
+
+## The healthcare bridge before Medicare
+
+Medicare eligibility starts at 65 — if you retire earlier, you need a plan to cover healthcare costs in the gap: COBRA continuation from a former employer (often expensive), marketplace insurance, or a spouse's employer plan. This is one of the most overlooked costs of early retirement and deserves real budgeting attention.
+
+## Required Minimum Distributions (RMDs)
+
+Traditional 401(k)/IRA accounts require you to start withdrawing a minimum amount each year once you reach a certain age (currently 73, subject to periodic legislative changes) — the government eventually wants its deferred tax revenue. Roth accounts are not subject to RMDs during the original owner's lifetime, which is one reason some retirees prefer to draw down traditional accounts first.
+
+## Action items
+
+- If you're 50 or older, check whether you're taking advantage of catch-up contribution limits.
+- Think through your Social Security claiming strategy given your health and other income sources — even roughly.
+- If early retirement is a goal, price out a realistic healthcare bridge plan before you commit to a timeline.`,
+        quiz: [
+          {
+            question: "What generally happens to your Social Security benefit if you delay claiming past full retirement age?",
+            options: [
+              "It stays exactly the same",
+              "It decreases",
+              "It increases, by roughly 8% per year up to age 70",
+              "You lose eligibility entirely",
+            ],
+            correctIndex: 2,
+            explanation:
+              "Delaying past full retirement age (up to 70) increases your monthly benefit by roughly 8% per year of delay.",
+          },
+          {
+            question: "What's a major overlooked cost for people who retire before age 65?",
+            options: [
+              "Nothing — Medicare covers everyone regardless of age",
+              "Bridging healthcare costs until Medicare eligibility at 65",
+              "Social Security taxes",
+              "Property taxes",
+            ],
+            correctIndex: 1,
+            explanation:
+              "Since Medicare starts at 65, early retirees need a plan (COBRA, marketplace insurance, etc.) to cover healthcare in the gap.",
+          },
+          {
+            question: "What are Required Minimum Distributions (RMDs)?",
+            options: [
+              "A penalty for contributing too much to a 401(k)",
+              "A mandatory minimum withdrawal from traditional retirement accounts starting at a certain age",
+              "A tax credit for retirees",
+              "A rule that only applies to Roth accounts",
+            ],
+            correctIndex: 1,
+            explanation:
+              "RMDs require withdrawals from traditional (not Roth) retirement accounts starting at a certain age, since the government eventually collects deferred taxes on that money.",
           },
         ],
       },
@@ -789,6 +1377,79 @@ Protecting what you've built also means protecting your identity:
             correctIndex: 1,
             explanation:
               "Beneficiary designations on accounts like retirement plans and life insurance usually take precedence over your will, so they need separate upkeep.",
+          },
+        ],
+      },
+      {
+        slug: "selling-a-home-and-advanced-estate-tools",
+        title: "Selling a Home and Advanced Estate Tools",
+        estMinutes: 12,
+        difficulty: "hard",
+        body: `## Timing a home sale
+
+Real estate markets are seasonal and cyclical — spring and early summer tend to see the most buyer activity in many markets, though local conditions vary widely. Beyond seasonality, consider your own timeline: selling before you've lined up your next home can mean temporary housing; buying before selling can mean carrying two mortgages briefly. Neither is wrong, but plan for the gap deliberately rather than assuming a perfectly seamless handoff.
+
+## The real costs of selling
+
+Selling isn't free — budget for:
+- **Agent commissions** — historically around 5-6% combined (buyer's and seller's agent), though this has been evolving; always confirm the actual rate upfront.
+- **Closing costs** — title fees, transfer taxes, and other closing costs, commonly a few percent of the sale price.
+- **Staging and repairs** — minor repairs and staging often pay for themselves in a faster sale or higher offers, but get quotes before assuming.
+
+## The capital gains exclusion
+
+If you've owned and lived in your home as your primary residence for at least 2 of the last 5 years, you can typically exclude a significant amount of capital gains from taxation on the sale (a substantial exclusion for single filers, roughly double for married filing jointly, subject to current tax law). This is one of the most valuable tax benefits available to everyday homeowners — but it generally doesn't apply to investment or rental properties you haven't lived in.
+
+## Trusts vs. wills
+
+A will directs asset distribution but generally must go through **probate** — a public, sometimes lengthy court process. A **revocable living trust** holds assets during your lifetime and passes them to beneficiaries outside of probate — faster, more private, but requires actually retitling assets into the trust's name to work, which people sometimes skip. Trusts add complexity and typically some upfront cost, so they make the most sense for larger or more complex estates, blended families, or anyone who specifically wants to avoid probate.
+
+## Power of attorney, in more detail
+
+A **financial power of attorney** lets a person you designate manage your finances if you're incapacitated — pay bills, manage accounts, make financial decisions on your behalf. Without one, your family may need to petition a court for guardianship/conservatorship, an expensive and slow process. This document works alongside (not instead of) a healthcare directive, which covers medical decisions specifically.
+
+## Action items
+
+- If you're planning to sell a home, get a realistic estimate of total selling costs, not just the sale price.
+- Check whether you qualify for the capital gains exclusion on a primary residence sale.
+- If you have a complex estate or want to avoid probate, research whether a revocable living trust makes sense — many estate attorneys offer an initial consultation.
+- Confirm you have a financial power of attorney in place, not just a will.`,
+        quiz: [
+          {
+            question: "What's a requirement to typically qualify for the primary-residence capital gains exclusion?",
+            options: [
+              "Owning any property for any length of time",
+              "Owning and living in the home as your primary residence for at least 2 of the last 5 years",
+              "Only applies to rental properties",
+              "Being over age 65",
+            ],
+            correctIndex: 1,
+            explanation:
+              "The exclusion generally requires the home to have been your primary residence for at least 2 of the last 5 years before the sale.",
+          },
+          {
+            question: "What's a key advantage of a revocable living trust over a will alone?",
+            options: [
+              "It's always free to set up",
+              "It can pass assets to beneficiaries outside of the public probate process",
+              "It replaces the need for a healthcare directive",
+              "It has no ongoing maintenance requirements",
+            ],
+            correctIndex: 1,
+            explanation:
+              "A properly funded trust bypasses probate, making the transfer faster and more private than a will, which must go through probate.",
+          },
+          {
+            question: "What does a financial power of attorney allow someone to do?",
+            options: [
+              "Make medical decisions on your behalf",
+              "Manage your finances if you become incapacitated",
+              "Automatically inherit your estate",
+              "Change your will without your consent",
+            ],
+            correctIndex: 1,
+            explanation:
+              "A financial power of attorney authorizes a designated person to manage your financial affairs if you're unable to do so yourself.",
           },
         ],
       },
