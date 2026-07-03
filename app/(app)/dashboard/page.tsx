@@ -16,6 +16,7 @@ import {
   GraduationCap,
   Trophy,
   Flame,
+  FileBarChart,
 } from "lucide-react";
 import { getCurrentUser } from "@/lib/auth";
 import { getDashboardData } from "@/lib/finance";
@@ -73,6 +74,7 @@ export default async function DashboardPage() {
   ];
 
   const quickAdds = [
+    { href: "/reports", label: "Reports", icon: FileBarChart },
     { href: "/learn", label: "Learn", icon: GraduationCap },
     { href: "/achievements", label: "Achievements", icon: Trophy },
     { href: "/coach", label: "AI Coach", icon: Bot },

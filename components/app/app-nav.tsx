@@ -14,11 +14,13 @@ import {
   Bot,
   GraduationCap,
   Trophy,
+  FileBarChart,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const items = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
+  { href: "/reports", label: "Reports", icon: FileBarChart },
   { href: "/learn", label: "Learn", icon: GraduationCap },
   { href: "/achievements", label: "Achievements", icon: Trophy },
   { href: "/coach", label: "AI Coach", icon: Bot },

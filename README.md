@@ -130,7 +130,8 @@ footer. Fully responsive and mobile-first.
 - [x] **Phase 7** — AI Money Coach on `/coach`, powered by the real Claude API (`claude-sonnet-5`), grounded in the member's live financial data, teaching-oriented system prompt, persisted conversation history, Decision Coach starter questions, and a lightweight rate limiter
 - [x] **Learning Center** — `/learn`: 9 courses (3 per level: Beginner/Intermediate/Advanced, matching the homepage roadmap), one thorough lesson each with markdown content, a graded quiz, XP/level/streak progress tracking. Content lives in `lib/learning-content.ts` (static, versioned) — additional lessons per course are a content addition, not an engineering one.
 - [x] **Gamification** — `/achievements`: 14 badges checked against real data (lessons completed, quizzes, streaks, accounts/goals/debts/budget added, Health Score), XP + level + learning-streak display, awarded via Server Actions on save (never during page render)
-- [ ] **Later** — Remaining lessons per course, budget streaks, reports, tools, admin, Stripe billing, Google/Apple auth
+- [x] **Reports** — `/reports`: Weekly/Monthly/Annual tabs with income-vs-expenses and category charts, a savings-rate trend, investment *contributions* (not portfolio value — no market-value history is tracked), budget adherence for the current period, and trend-based recommendations
+- [ ] **Later** — Remaining lessons per course, budget streaks, tools, admin, Stripe billing, Google/Apple auth
 
 ## Deployment
 
