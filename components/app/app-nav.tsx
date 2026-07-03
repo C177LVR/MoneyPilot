@@ -16,6 +16,7 @@ import {
   Trophy,
   FileBarChart,
   ShieldCheck,
+  Repeat,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -28,6 +29,7 @@ const items = [
   { href: "/budget", label: "Budget", icon: PieChart },
   { href: "/accounts", label: "Accounts", icon: Wallet },
   { href: "/transactions", label: "Transactions", icon: ArrowLeftRight },
+  { href: "/subscriptions", label: "Subscriptions", icon: Repeat },
   { href: "/debts", label: "Debts", icon: TrendingDown },
   { href: "/goals", label: "Goals", icon: Target },
   { href: "/bills", label: "Bills", icon: CalendarClock },

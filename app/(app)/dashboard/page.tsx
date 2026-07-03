@@ -17,6 +17,7 @@ import {
   Trophy,
   Flame,
   FileBarChart,
+  Repeat,
 } from "lucide-react";
 import { getCurrentUser } from "@/lib/auth";
 import { getDashboardData } from "@/lib/finance";
@@ -81,6 +82,7 @@ export default async function DashboardPage() {
     { href: "/budget", label: "Budget", icon: PieChart },
     { href: "/accounts", label: "Accounts", icon: Wallet },
     { href: "/transactions", label: "Transactions", icon: TrendingUp },
+    { href: "/subscriptions", label: "Subscriptions", icon: Repeat },
     { href: "/debts", label: "Debts", icon: TrendingDown },
     { href: "/goals", label: "Goals", icon: Target },
     { href: "/bills", label: "Bills", icon: CalendarClock },

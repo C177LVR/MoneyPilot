@@ -149,7 +149,8 @@ footer. Fully responsive and mobile-first.
 - [x] **Gamification** — `/achievements`: 14 badges checked against real data (lessons completed, quizzes, streaks, accounts/goals/debts/budget added, Health Score), XP + level + learning-streak display, awarded via Server Actions on save (never during page render)
 - [x] **Reports** — `/reports`: Weekly/Monthly/Annual tabs with income-vs-expenses and category charts, a savings-rate trend, investment *contributions* (not portfolio value — no market-value history is tracked), budget adherence for the current period, and trend-based recommendations
 - [x] **Admin panel** — `/admin`: user management (role toggle), platform analytics, a real DB-backed Articles CMS with a public `/blog`, and broadcast notifications (dismissible in-app banner). Managing *lessons/quizzes/calculators* isn't included — see note below.
-- [ ] **Later** — Remaining lessons per course, budget streaks, other Tools, Stripe billing, Google/Apple auth
+- [x] **Subscription Tracker** — `/subscriptions`: recurring charges (weekly/monthly/quarterly/yearly), monthly & annual cost totals, due-soon/overdue flags, and a one-click "Renew" that advances the next charge date by a full billing cycle
+- [ ] **Later** — Remaining lessons per course, budget streaks, other Tools (Financial Calendar, Tax Organizer, Document Vault), Stripe billing, Google/Apple auth
 
 ## Deployment
 

@@ -14,6 +14,7 @@ const PROTECTED_PREFIXES = [
   "/budget",
   "/accounts",
   "/transactions",
+  "/subscriptions",
   "/debts",
   "/goals",
   "/bills",
