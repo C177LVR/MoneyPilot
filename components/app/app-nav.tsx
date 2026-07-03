@@ -11,11 +11,13 @@ import {
   CalendarClock,
   PieChart,
   Calculator,
+  Bot,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const items = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
+  { href: "/coach", label: "AI Coach", icon: Bot },
   { href: "/budget", label: "Budget", icon: PieChart },
   { href: "/accounts", label: "Accounts", icon: Wallet },
   { href: "/transactions", label: "Transactions", icon: ArrowLeftRight },

@@ -54,6 +54,22 @@ auth user's UUID as the app `User.id`. `middleware.ts` refreshes the session and
 guards `/dashboard`, `/onboarding`, and `/admin`; authorization is enforced in
 the app layer (not RLS, since Prisma connects directly).
 
+## AI Coach setup (Phase 7)
+
+Also degrades gracefully — without a key, `/coach` shows a "not configured"
+notice instead of erroring. To turn it on:
+
+1. Get an API key from [console.anthropic.com](https://console.anthropic.com).
+2. Set `ANTHROPIC_API_KEY` (and optionally `ANTHROPIC_MODEL`, default
+   `claude-sonnet-5`) in `.env`.
+3. Visit `/coach` — conversations persist per user (`CoachConversation` /
+   `CoachMessage`), and each answer is grounded in that user's real dashboard
+   data (income, debts, goals, Health Score) via `lib/coach.ts`.
+
+The rate limiter in `lib/rate-limit.ts` is in-memory and per-process — fine
+for a single instance, but swap for a durable store (e.g. Upstash Redis)
+before scaling to multiple instances.
+
 > ⚠️ **Build note:** `next build` and `prisma migrate` fail on this `Z:\` backup
 > drive with an `EISDIR readlink` error (a symlink quirk of the drive). `npm run
 > dev` and `tsc --noEmit` work fine here; run production builds and migrations
@@ -105,7 +121,7 @@ footer. Fully responsive and mobile-first.
 - [x] **Phase 4** — Financial Health Score (0-100, 7 weighted factors + recommendations) and Chart.js dashboard visualizations (income vs expenses, spending by category)
 - [x] **Phase 5** — Budget Builder: draggable categories, planned-allocation pie chart, actual-vs-planned tracking against real transactions, rule-based recommendations, starter category preset
 - [x] **Phase 6** — Debt payoff planner (snowball/avalanche, real debt data, balance-over-time chart) on `/debts`, and a public `/calculators` hub covering all 14 spec calculators (Retirement, Mortgage, Auto Loan, Compound Interest, Savings Growth, Emergency Fund, Net Worth, Debt-to-Income, Rule of 72, Investment Fees, Credit Card Interest, College Savings, plus Budget from Phase 5 and Debt Payoff above)
-- [ ] **Phase 7** — AI Money Coach (Claude) + Decision Coach
+- [x] **Phase 7** — AI Money Coach on `/coach`, powered by the real Claude API (`claude-sonnet-5`), grounded in the member's live financial data, teaching-oriented system prompt, persisted conversation history, Decision Coach starter questions, and a lightweight rate limiter
 - [ ] **Later** — Learning Center (23 courses), gamification, reports, tools, admin, Stripe billing, Google/Apple auth
 
 ## Deployment
