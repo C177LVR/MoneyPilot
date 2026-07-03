@@ -1,0 +1,641 @@
+You are an expert software architect, UX designer, personal finance educator, and senior full-stack developer.
+
+Create a production-quality, responsive website called "My Money Mentor"
+
+The website should teach people how to manage money regardless of income.
+
+The website should feel like having a personal financial coach available 24/7.
+
+The design should rival products like Rocket Money, Monarch Money, YNAB, NerdWallet, and Mint.
+
+Do NOT create a simple informational website.
+
+Instead create a complete interactive learning platform.
+
+The site should be visually beautiful, modern, responsive, and mobile-first.
+
+Use smooth animations, subtle gradients, floating cards, glassmorphism, and modern typography.
+
+Use calming colors including blues, greens, white backgrounds, and accent colors that inspire confidence.
+
+The homepage should immediately communicate
+
+"Take control of your money."
+
+The homepage should include:
+
+• Hero section
+• Animated financial dashboard
+• CTA buttons
+• Success stories
+• Feature cards
+• Learning roadmap
+• Financial health score preview
+• Mobile app mockup
+• Testimonials
+• FAQ
+• Footer
+
+---------------------------------------------------
+PRIMARY GOAL
+---------------------------------------------------
+
+Teach users to master personal finance from beginner through advanced.
+
+Users should learn by doing.
+
+Every lesson should include:
+
+• Explanation
+• Examples
+• Interactive calculators
+• Quizzes
+• Progress tracking
+• Action items
+
+---------------------------------------------------
+USER ACCOUNTS
+---------------------------------------------------
+
+Implement authentication.
+
+Support:
+
+Email
+Google login
+Apple login
+
+Each user has
+
+Profile
+
+Financial goals
+
+Budget
+
+Savings goals
+
+Debt
+
+Investments
+
+Credit score
+
+Emergency fund
+
+Monthly reports
+
+Achievements
+
+---------------------------------------------------
+DASHBOARD
+---------------------------------------------------
+
+Create a personalized dashboard showing
+
+Monthly income
+
+Monthly expenses
+
+Cash flow
+
+Net worth
+
+Debt
+
+Savings rate
+
+Investment growth
+
+Budget progress
+
+Emergency fund progress
+
+Upcoming bills
+
+Recent transactions
+
+Financial Health Score
+
+Display attractive charts.
+
+---------------------------------------------------
+FINANCIAL HEALTH SCORE
+---------------------------------------------------
+
+Generate a score from 0-100.
+
+Factors include
+
+Savings rate
+
+Debt ratio
+
+Emergency fund
+
+Budget consistency
+
+Credit utilization
+
+Investment progress
+
+Bill payment history
+
+Display recommendations to improve the score.
+
+---------------------------------------------------
+LEARNING CENTER
+---------------------------------------------------
+
+Build structured learning paths.
+
+Beginner
+
+Intermediate
+
+Advanced
+
+Courses should include
+
+Budgeting
+
+Emergency Funds
+
+Debt Elimination
+
+Credit Cards
+
+Credit Scores
+
+Taxes
+
+Insurance
+
+Retirement
+
+Investing
+
+Real Estate
+
+College Savings
+
+Estate Planning
+
+Identity Theft
+
+Fraud Prevention
+
+Social Security
+
+Medicare
+
+Buying a Home
+
+Selling a Home
+
+Buying a Car
+
+Negotiating Salary
+
+Side Hustles
+
+Small Business Finance
+
+Passive Income
+
+Every lesson should include
+
+Articles
+
+Videos
+
+Interactive exercises
+
+Worksheets
+
+Checklists
+
+Quizzes
+
+Estimated completion time
+
+Difficulty level
+
+---------------------------------------------------
+BUDGET BUILDER
+---------------------------------------------------
+
+Interactive budget planner.
+
+Categories
+
+Housing
+
+Utilities
+
+Insurance
+
+Food
+
+Transportation
+
+Medical
+
+Entertainment
+
+Subscriptions
+
+Children
+
+Pets
+
+Travel
+
+Savings
+
+Investments
+
+Debt
+
+Custom categories
+
+Users can drag and drop categories.
+
+Show pie charts.
+
+Provide AI recommendations.
+
+---------------------------------------------------
+GOAL TRACKER
+---------------------------------------------------
+
+Users can create unlimited goals.
+
+Examples
+
+Emergency fund
+
+Vacation
+
+Retirement
+
+Pay off car
+
+Pay off credit cards
+
+Home purchase
+
+College
+
+Track
+
+Target amount
+
+Current amount
+
+Target date
+
+Progress
+
+---------------------------------------------------
+DEBT ELIMINATION
+---------------------------------------------------
+
+Support
+
+Snowball Method
+
+Avalanche Method
+
+Create payoff schedules.
+
+Show
+
+Interest saved
+
+Months saved
+
+Graphs
+
+---------------------------------------------------
+RETIREMENT PLANNER
+---------------------------------------------------
+
+Interactive retirement calculator.
+
+Include
+
+401(k)
+
+IRA
+
+Roth IRA
+
+Pension
+
+Social Security
+
+Expected expenses
+
+Inflation
+
+Investment returns
+
+Monte Carlo simulation (future enhancement placeholder)
+
+---------------------------------------------------
+INVESTMENT LEARNING
+---------------------------------------------------
+
+Teach
+
+Stocks
+
+Bonds
+
+ETFs
+
+Mutual Funds
+
+Index Funds
+
+Risk
+
+Diversification
+
+Compound Interest
+
+Dollar Cost Averaging
+
+Asset Allocation
+
+---------------------------------------------------
+CALCULATORS
+---------------------------------------------------
+
+Build calculators for
+
+Budget
+
+Mortgage
+
+Auto Loan
+
+Debt Payoff
+
+Compound Interest
+
+Savings Growth
+
+Retirement
+
+Emergency Fund
+
+Net Worth
+
+Debt to Income
+
+Rule of 72
+
+Investment Fees
+
+Credit Card Interest
+
+College Savings
+
+---------------------------------------------------
+Financial Decision Coach
+---------------------------------------------------
+Let users ask questions like:
+
+* "Can I afford a $35,000 car?"
+* "Should I rent or buy?"
+* "How much vacation can I afford this year?"
+* "If I retire at 62 instead of 67, what changes?"
+* "Should I pay off my mortgage early or invest?"
+* "What's the impact of refinancing?"
+* "Can I afford to quit my job and start a business?"
+
+The AI would explain the trade-offs, show calculations, and recommend next steps in plain language.
+
+---------------------------------------------------
+TOOLS
+---------------------------------------------------
+
+Net Worth Tracker
+
+Bill Reminder
+
+Expense Tracker
+
+Income Tracker
+
+Subscription Tracker
+
+Financial Calendar
+
+Tax Organizer
+
+Document Vault
+
+---------------------------------------------------
+AI COACH
+---------------------------------------------------
+
+Create an AI assistant that answers financial questions.
+
+Examples
+
+How much house can I afford?
+
+Should I pay off debt first?
+
+Can I afford a vacation?
+
+How much should I save?
+
+What investment should I learn about?
+
+The AI should teach.
+
+Not simply answer.
+
+---------------------------------------------------
+GAMIFICATION
+---------------------------------------------------
+
+Users earn
+
+Badges
+
+XP
+
+Achievements
+
+Learning streaks
+
+Budget streaks
+
+Savings milestones
+
+Financial Level
+
+---------------------------------------------------
+REPORTS
+---------------------------------------------------
+
+Weekly
+
+Monthly
+
+Annual
+
+Include
+
+Spending trends
+
+Savings trends
+
+Investment growth
+
+Budget adherence
+
+Recommendations
+
+---------------------------------------------------
+ADMIN PANEL
+---------------------------------------------------
+
+Admin can
+
+Manage lessons
+
+Manage users
+
+Publish articles
+
+Send notifications
+
+Manage quizzes
+
+Manage calculators
+
+View analytics
+
+---------------------------------------------------
+SEO
+---------------------------------------------------
+
+Generate optimized pages.
+
+Schema.org markup
+
+Fast loading
+
+Accessibility
+
+Meta tags
+
+Open Graph
+
+Structured Data
+
+Sitemap
+
+Robots.txt
+
+---------------------------------------------------
+TECHNOLOGY
+---------------------------------------------------
+
+Next.js
+
+TypeScript
+
+Tailwind CSS
+
+Supabase
+
+Prisma
+
+PostgreSQL
+
+Stripe
+
+Chart.js
+
+Framer Motion
+
+Responsive Design
+
+Dark Mode
+
+Light Mode
+
+---------------------------------------------------
+PERFORMANCE
+---------------------------------------------------
+
+Google Lighthouse score above 95.
+
+Lazy loading
+
+Image optimization
+
+Caching
+
+Server-side rendering
+
+---------------------------------------------------
+SECURITY
+---------------------------------------------------
+
+Encrypted data
+
+HTTPS
+
+Secure authentication
+
+Rate limiting
+
+SQL injection protection
+
+XSS protection
+
+CSRF protection
+
+---------------------------------------------------
+DELIVERABLES
+---------------------------------------------------
+
+Generate the entire application.
+
+Include
+
+Folder structure
+
+Database schema
+
+API routes
+
+Authentication
+
+UI components
+
+Charts
+
+Responsive layouts
+
+Animations
+
+Complete source code
+
+Reusable React components
+
+Documentation
+
+Deployment instructions
+
+Testing strategy
+
+Future enhancement roadmap
