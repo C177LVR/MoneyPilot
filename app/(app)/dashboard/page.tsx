@@ -69,6 +69,7 @@ export default async function DashboardPage() {
   ];
 
   const quickAdds = [
+    { href: "/budget", label: "Budget", icon: PieChart },
     { href: "/accounts", label: "Accounts", icon: Wallet },
     { href: "/transactions", label: "Transactions", icon: TrendingUp },
     { href: "/debts", label: "Debts", icon: TrendingDown },
@@ -247,7 +248,7 @@ export default async function DashboardPage() {
       {/* Quick links */}
       <div className="mt-6">
         <h2 className="mb-3 font-display text-lg font-semibold">Manage your data</h2>
-        <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-6">
           {quickAdds.map((q) => (
             <Link
               key={q.href}

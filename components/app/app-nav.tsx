@@ -9,11 +9,13 @@ import {
   TrendingDown,
   Target,
   CalendarClock,
+  PieChart,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const items = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
+  { href: "/budget", label: "Budget", icon: PieChart },
   { href: "/accounts", label: "Accounts", icon: Wallet },
   { href: "/transactions", label: "Transactions", icon: ArrowLeftRight },
   { href: "/debts", label: "Debts", icon: TrendingDown },
