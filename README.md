@@ -70,6 +70,23 @@ The rate limiter in `lib/rate-limit.ts` is in-memory and per-process — fine
 for a single instance, but swap for a durable store (e.g. Upstash Redis)
 before scaling to multiple instances.
 
+## Admin panel setup
+
+There's no self-serve way to become the first admin (that would be circular —
+you'd need an admin to grant admin access). Once your database is live, set
+your own `User.role` to `ADMIN` directly (e.g. via Prisma Studio: `npx prisma
+studio`, or a one-off SQL update). After that, admins can promote/demote other
+users from `/admin/users`, with a guard against demoting yourself.
+
+**Scope note:** Articles and Notifications are real, DB-backed CRUD content
+managed from `/admin`. Lessons, quizzes, and calculators are **not**
+DB-editable — they're static, versioned code (`lib/learning-content.ts`,
+`lib/calculators.ts`) by deliberate design (see the Learning Center section
+below), so "managing" them today means editing those files directly. Making
+them admin-editable would mean migrating that content into the database, a
+bigger change than adding CRUD screens for genuinely new content types like
+Articles.
+
 > ⚠️ **Build note:** `next build` and `prisma migrate` fail on this `Z:\` backup
 > drive with an `EISDIR readlink` error (a symlink quirk of the drive). `npm run
 > dev` and `tsc --noEmit` work fine here; run production builds and migrations
@@ -131,7 +148,8 @@ footer. Fully responsive and mobile-first.
 - [x] **Learning Center** — `/learn`: 9 courses (3 per level: Beginner/Intermediate/Advanced, matching the homepage roadmap), one thorough lesson each with markdown content, a graded quiz, XP/level/streak progress tracking. Content lives in `lib/learning-content.ts` (static, versioned) — additional lessons per course are a content addition, not an engineering one.
 - [x] **Gamification** — `/achievements`: 14 badges checked against real data (lessons completed, quizzes, streaks, accounts/goals/debts/budget added, Health Score), XP + level + learning-streak display, awarded via Server Actions on save (never during page render)
 - [x] **Reports** — `/reports`: Weekly/Monthly/Annual tabs with income-vs-expenses and category charts, a savings-rate trend, investment *contributions* (not portfolio value — no market-value history is tracked), budget adherence for the current period, and trend-based recommendations
-- [ ] **Later** — Remaining lessons per course, budget streaks, tools, admin, Stripe billing, Google/Apple auth
+- [x] **Admin panel** — `/admin`: user management (role toggle), platform analytics, a real DB-backed Articles CMS with a public `/blog`, and broadcast notifications (dismissible in-app banner). Managing *lessons/quizzes/calculators* isn't included — see note below.
+- [ ] **Later** — Remaining lessons per course, budget streaks, other Tools, Stripe billing, Google/Apple auth
 
 ## Deployment
 

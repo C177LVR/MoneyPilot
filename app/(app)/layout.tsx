@@ -2,9 +2,11 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getCurrentUser } from "@/lib/auth";
 import { signOut } from "@/app/actions/auth";
+import { prisma } from "@/lib/prisma";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { AppNav } from "@/components/app/app-nav";
 import { LogoMark } from "@/components/brand/logo-mark";
+import { NotificationBanner } from "@/components/app/notification-banner";
 
 export default async function AppLayout({
   children,
@@ -16,9 +18,18 @@ export default async function AppLayout({
   if (!appUser?.profile?.onboardedAt) redirect("/onboarding");
 
   const firstName = (appUser.name ?? "there").split(" ")[0];
+  const activeNotification = await prisma.notification
+    .findFirst({ where: { active: true }, orderBy: { createdAt: "desc" } })
+    .catch(() => null);
 
   return (
     <div className="min-h-screen bg-background">
+      {activeNotification && (
+        <NotificationBanner
+          id={activeNotification.id}
+          message={activeNotification.message}
+        />
+      )}
       <header className="sticky top-0 z-40 glass">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
           <Link
@@ -43,7 +54,7 @@ export default async function AppLayout({
       </header>
 
       <div className="mx-auto max-w-7xl px-4 py-6 lg:flex lg:gap-6">
-        <AppNav />
+        <AppNav isAdmin={appUser.role === "ADMIN"} />
         <main className="min-w-0 flex-1 py-2">{children}</main>
       </div>
     </div>

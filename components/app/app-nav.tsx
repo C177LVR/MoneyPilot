@@ -15,6 +15,7 @@ import {
   GraduationCap,
   Trophy,
   FileBarChart,
+  ShieldCheck,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -33,13 +34,16 @@ const items = [
   { href: "/calculators", label: "Calculators", icon: Calculator },
 ];
 
-export function AppNav() {
+export function AppNav({ isAdmin = false }: { isAdmin?: boolean }) {
   const pathname = usePathname();
+  const navItems = isAdmin
+    ? [...items, { href: "/admin", label: "Admin", icon: ShieldCheck }]
+    : items;
 
   return (
     <nav className="lg:w-56 lg:shrink-0">
       <ul className="flex gap-1 overflow-x-auto pb-2 lg:sticky lg:top-24 lg:flex-col lg:overflow-visible lg:pb-0">
-        {items.map((item) => {
+        {navItems.map((item) => {
           const active =
             pathname === item.href || pathname.startsWith(item.href + "/");
           return (

@@ -73,7 +73,9 @@ export function Footer() {
                 {col.links.map((l) => (
                   <li key={l}>
                     <Link
-                      href={l === "Calculators" ? "/calculators" : "#"}
+                      href={
+                        l === "Calculators" ? "/calculators" : l === "Blog" ? "/blog" : "#"
+                      }
                       className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                     >
                       {l}
