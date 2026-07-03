@@ -17,13 +17,28 @@ export async function saveAccount(
   const name = String(formData.get("name") ?? "").trim();
   const type = String(formData.get("type") ?? "") as AccountType;
   const balance = Number(formData.get("balance") ?? 0);
+  const creditLimitRaw = String(formData.get("creditLimit") ?? "").trim();
 
   if (!name) return { error: "Account name is required." };
   if (!Object.values(AccountType).includes(type))
     return { error: "Please choose an account type." };
   if (!Number.isFinite(balance)) return { error: "Enter a valid balance." };
 
-  const data = { name, type, balance: new Prisma.Decimal(balance) };
+  // Credit limit only applies to credit cards; ignored otherwise.
+  let creditLimit: Prisma.Decimal | null = null;
+  if (type === AccountType.CREDIT && creditLimitRaw !== "") {
+    const limit = Number(creditLimitRaw);
+    if (!Number.isFinite(limit) || limit < 0)
+      return { error: "Enter a valid credit limit." };
+    creditLimit = new Prisma.Decimal(limit);
+  }
+
+  const data = {
+    name,
+    type,
+    balance: new Prisma.Decimal(balance),
+    creditLimit,
+  };
   try {
     if (id) {
       await prisma.financialAccount.updateMany({ where: { id, userId }, data });

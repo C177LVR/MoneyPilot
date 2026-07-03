@@ -24,6 +24,7 @@ export default async function AccountsPage() {
     name: a.name,
     type: a.type,
     balance: Number(a.balance),
+    creditLimit: a.creditLimit != null ? Number(a.creditLimit) : null,
   }));
 
   return (

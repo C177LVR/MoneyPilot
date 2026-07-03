@@ -11,6 +11,7 @@ export type AccountView = {
   name: string;
   type: string;
   balance: number;
+  creditLimit: number | null;
 };
 
 const TYPES = [
@@ -55,17 +56,21 @@ export function AccountManager({ accounts }: { accounts: AccountView[] }) {
               ))}
             </Select>
           </Field>
-          <Field
-            label="Current balance"
-            htmlFor="balance"
-            className="sm:col-span-2"
-          >
+          <Field label="Current balance" htmlFor="balance">
             <MoneyInput
               id="balance"
               name="balance"
               defaultValue={editing?.balance ?? ""}
               placeholder="0.00"
               required
+            />
+          </Field>
+          <Field label="Credit limit (credit cards only)" htmlFor="creditLimit">
+            <MoneyInput
+              id="creditLimit"
+              name="creditLimit"
+              defaultValue={editing?.creditLimit ?? ""}
+              placeholder="Optional"
             />
           </Field>
         </>

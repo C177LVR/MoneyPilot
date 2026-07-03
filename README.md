@@ -102,7 +102,7 @@ footer. Fully responsive and mobile-first.
 - [x] **Phase 1** — Marketing homepage
 - [x] **Phase 2** — Supabase email/password auth, session middleware, onboarding wizard, protected dashboard shell
 - [x] **Phase 3** — App shell (sidebar) + manual data entry with full CRUD for accounts, transactions, debts, goals, and bills, feeding a real summary dashboard
-- [ ] **Phase 4** — Dashboard charts + Financial Health Score algorithm
+- [x] **Phase 4** — Financial Health Score (0-100, 7 weighted factors + recommendations) and Chart.js dashboard visualizations (income vs expenses, spending by category)
 - [ ] **Phase 5** — Budget Builder (drag-and-drop, pie charts, recommendations)
 - [ ] **Phase 6** — Debt payoff (snowball/avalanche), Retirement planner, calculators
 - [ ] **Phase 7** — AI Money Coach (Claude) + Decision Coach

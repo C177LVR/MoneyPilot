@@ -63,6 +63,8 @@ model FinancialAccount {
   name      String
   type      AccountType
   balance   Decimal     @default(0) @db.Decimal(14, 2)
+  // Credit limit for CREDIT accounts — used to compute credit utilization.
+  creditLimit Decimal?  @db.Decimal(14, 2)
   createdAt DateTime    @default(now())
   transactions Transaction[]
 }

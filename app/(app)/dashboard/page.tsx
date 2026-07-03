@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import {
   Wallet,
   TrendingUp,
@@ -9,11 +10,15 @@ import {
   CalendarClock,
   ArrowRight,
   Plus,
+  BarChart3,
+  PieChart,
 } from "lucide-react";
-import { redirect } from "next/navigation";
 import { getCurrentUser } from "@/lib/auth";
-import { getFinancialSummary } from "@/lib/finance";
+import { getDashboardData } from "@/lib/finance";
 import { Card, GlassCard } from "@/components/ui/card";
+import { HealthScoreCard } from "@/components/dashboard/health-score-card";
+import { IncomeExpenseChart } from "@/components/dashboard/income-expense-chart";
+import { CategoryChart } from "@/components/dashboard/category-chart";
 import { formatCurrency, formatPercent } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -25,15 +30,13 @@ export default async function DashboardPage() {
   const { appUser } = await getCurrentUser();
   if (!appUser) redirect("/login");
   const firstName = (appUser.name ?? "there").split(" ")[0];
-  const summary = await getFinancialSummary(appUser.id);
+  const { summary, counts, series, categoryBreakdown, health, bills, goals } =
+    await getDashboardData(appUser.id);
 
   const hasData =
-    summary.counts.accounts +
-      summary.counts.transactions +
-      summary.counts.debts +
-      summary.counts.goals +
-      summary.counts.bills >
+    counts.accounts + counts.transactions + counts.debts + counts.goals + counts.bills >
     0;
+  const hasSeries = series.some((s) => s.income > 0 || s.expenses > 0);
 
   const stats = [
     {
@@ -73,7 +76,7 @@ export default async function DashboardPage() {
     { href: "/bills", label: "Bills", icon: CalendarClock },
   ];
 
-  const unpaidBills = summary.bills
+  const unpaidBills = bills
     .filter((b) => !b.isPaid)
     .sort((a, b) => a.dueDay - b.dueDay)
     .slice(0, 4);
@@ -82,8 +85,7 @@ export default async function DashboardPage() {
     <div>
       <h1 className="font-display text-3xl font-bold">Welcome, {firstName} 👋</h1>
       <p className="mt-1 text-muted-foreground">
-        Here&apos;s the snapshot from the data you&apos;ve entered. Charts and
-        your Financial Health Score arrive in Phase 4.
+        Your live financial snapshot, updated from the data you enter.
       </p>
 
       {!hasData && (
@@ -93,19 +95,20 @@ export default async function DashboardPage() {
               Let&apos;s add your first numbers
             </h2>
             <p className="mt-1 text-sm text-muted-foreground">
-              Add an account or a few transactions to bring your dashboard to
-              life.
+              Add an account or a few transactions to bring your dashboard and
+              Health Score to life.
             </p>
           </div>
           <Link
             href="/accounts"
-            className="inline-flex h-11 items-center gap-2 rounded-full bg-gradient-brand px-6 text-sm font-semibold text-white shadow-lg"
+            className="inline-flex h-11 shrink-0 items-center gap-2 rounded-full bg-gradient-brand px-6 text-sm font-semibold text-white shadow-lg"
           >
             <Plus className="h-4 w-4" /> Add an account
           </Link>
         </GlassCard>
       )}
 
+      {/* Stat cards */}
       <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((s) => (
           <Card key={s.label} className="p-5">
@@ -120,8 +123,42 @@ export default async function DashboardPage() {
         ))}
       </div>
 
+      {/* Health score */}
+      <div className="mt-6">
+        <HealthScoreCard health={health} />
+      </div>
+
+      {/* Charts */}
       <div className="mt-6 grid gap-6 lg:grid-cols-2">
-        {/* Upcoming bills */}
+        <Card className="p-6">
+          <h2 className="mb-4 flex items-center gap-2 font-display text-lg font-semibold">
+            <BarChart3 className="h-5 w-5 text-brand-600" /> Income vs expenses
+          </h2>
+          {hasSeries ? (
+            <IncomeExpenseChart series={series} />
+          ) : (
+            <p className="py-16 text-center text-sm text-muted-foreground">
+              Log some transactions to see your 6-month trend.
+            </p>
+          )}
+        </Card>
+
+        <Card className="p-6">
+          <h2 className="mb-4 flex items-center gap-2 font-display text-lg font-semibold">
+            <PieChart className="h-5 w-5 text-brand-600" /> Spending by category
+          </h2>
+          {categoryBreakdown.length > 0 ? (
+            <CategoryChart slices={categoryBreakdown} />
+          ) : (
+            <p className="py-16 text-center text-sm text-muted-foreground">
+              No expenses logged this month yet.
+            </p>
+          )}
+        </Card>
+      </div>
+
+      {/* Bills + goals */}
+      <div className="mt-6 grid gap-6 lg:grid-cols-2">
         <Card className="p-6">
           <div className="flex items-center justify-between">
             <h2 className="font-display text-lg font-semibold">Upcoming bills</h2>
@@ -155,7 +192,7 @@ export default async function DashboardPage() {
                     </span>
                   </span>
                   <span className="font-display font-semibold">
-                    {formatCurrency(Number(b.amount))}
+                    {formatCurrency(b.amount)}
                   </span>
                 </li>
               ))}
@@ -163,7 +200,6 @@ export default async function DashboardPage() {
           )}
         </Card>
 
-        {/* Goals */}
         <Card className="p-6">
           <div className="flex items-center justify-between">
             <h2 className="font-display text-lg font-semibold">Goals</h2>
@@ -174,25 +210,24 @@ export default async function DashboardPage() {
               Manage
             </Link>
           </div>
-          {summary.goals.length === 0 ? (
+          {goals.length === 0 ? (
             <p className="mt-4 text-sm text-muted-foreground">
               No goals yet. Create one to start tracking progress.
             </p>
           ) : (
             <ul className="mt-4 space-y-4">
-              {summary.goals.slice(0, 3).map((g) => {
-                const target = Number(g.targetAmount);
-                const current = Number(g.currentAmount);
+              {goals.slice(0, 3).map((g) => {
                 const pct =
-                  target > 0
-                    ? Math.min(100, Math.round((current / target) * 100))
+                  g.targetAmount > 0
+                    ? Math.min(100, Math.round((g.currentAmount / g.targetAmount) * 100))
                     : 0;
                 return (
                   <li key={g.id}>
                     <div className="mb-1.5 flex justify-between text-sm">
                       <span className="font-medium">{g.name}</span>
                       <span className="text-muted-foreground">
-                        {formatCurrency(current)} / {formatCurrency(target)}
+                        {formatCurrency(g.currentAmount)} /{" "}
+                        {formatCurrency(g.targetAmount)}
                       </span>
                     </div>
                     <div className="h-2.5 overflow-hidden rounded-full bg-muted">
